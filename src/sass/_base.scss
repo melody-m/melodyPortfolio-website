@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;   
+    
+    @include respond(desktop) { //1500
+        font-size: 62.5%;
+    }
+
+    @include respond(big-tab) {  // width < 1300 ?
+		font-size: 54.16%; // 1rem = 9px, 8/16 = 50%
+	}
+
+	@include respond(small-tab) {
+		font-size: 50%; // 1rem = 8px, 8/16 = 50%  // width < 900 ?
+	}
+
+	@include respond(phone) {
+		font-size: 45%;
+    }
+
+    @include respond(big-desktop) {
+		font-size: 75%; //1rem = 12px, 12/16 
+	}
+}
+
+body {
+	box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.left{
+	width: 50%;
+    height: 100%;
+    float: left;
+    border-right: 1px solid $color-two;
+}
+
+.right{
+	width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.center{
+	float: left;
+	width: 100%;
+	margin: 0 auto;
+
+}

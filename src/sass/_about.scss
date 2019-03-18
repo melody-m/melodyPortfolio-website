@@ -1,0 +1,84 @@
+.about{
+    position: relative;
+    height: 100vh;
+
+    &__title{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        z-index: 200;
+        &--top{
+            transform: translateX(-1.5rem);
+            position: relative;
+        }
+        &--bottom{
+            transform: translateX(1.35rem);
+        }
+    }
+
+    &__content{
+       margin: 0 auto;
+       margin-top: 45%;
+       width: 60%;
+       text-align: justify;
+       & p{
+           margin-bottom: 2rem;
+       }
+    }
+
+    &__subtitle{
+        margin-bottom: 4rem;
+        text-align: right;
+    }
+
+    &__chrono{
+        text-align: center;
+        margin-top: 53%;      
+    }
+    &__line{
+        height: 6rem;
+        text-align: center;
+        border-bottom: 1px solid $color-two;
+        position: relative;
+        &Box{
+            width: 15rem;
+            height: 100%;
+            margin: 0 1.5rem;
+            display: inline-block;
+            text-align: center;
+        }
+        &--tall{
+            width: 2px;
+            height: 100%;
+            display: inline-block;
+            border-right: 1px solid $color-two;
+        }
+    }
+
+    &__circle{
+        display: inline-block;
+        width: 15rem;
+        height: 15rem;
+        margin: 0 1.5rem;
+        background-color: rgba($color-four,.5);
+        border-radius: 50%;
+        position: relative;
+
+        &--text{
+            @include absCenter;
+        }
+    }
+
+}
+
+// .blank{
+//     width:2rem;
+//     height: 4rem;
+//     background-color: white;
+//     border-radius: 50%;
+//     position: absolute;
+//     top: 4rem;
+//     left: 53%;
+//     z-index:100;
+// }

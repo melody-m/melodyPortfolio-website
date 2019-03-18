@@ -1,0 +1,75 @@
+.landpage{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
+
+    &__left{
+        width: 50%;
+        height: 100%;
+        float: left;
+        position: relative;
+        background-image: url(../img/landpage_L.png);
+        background-position: top;
+        background-size: cover;
+        transition: all .5s ease-in-out;
+    }
+    &__right{
+        width: 50%;
+        height: 100%;
+        float: right;
+        position: relative;
+        background-image: url(../img/landpage_R.png);
+        background-position: top;
+        background-size: cover;
+        transition: all .5s ease-in-out;
+    }
+
+    &__title{
+        &--L{
+            position: absolute;
+            top: 50%;
+            right: 0;      
+            text-align: right;  
+
+            border-right: 1px solid white;
+            //background-color: rgba(black, .7);
+            padding-right: 1rem;
+            //padding: 2rem 3rem;
+            text-shadow: 1px 1px 10px black;
+        }
+        &--R{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            //background-color: rgba(black, .7);
+            padding-left: 1rem;
+            text-shadow: 1px 1px 10px black;
+        }
+    }
+    &__enter{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        transition: all .5s ease-in-out;
+
+        &--btn{
+            color: white;
+            border: 1px solid white;
+            background-color: $color-two;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            box-shadow: 1px 1px 3px black;
+            transition: all .3s ease-out;
+
+            &:hover{
+                transform: translateY(-.5rem) scale(1.05);
+            }
+        }
+
+    }
+}

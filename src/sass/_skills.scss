@@ -1,0 +1,92 @@
+
+.skill{
+    position: relative;
+
+    &__title{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        z-index: 200;
+    }
+    &__container{
+        width: 100%;
+        text-align: center;
+        &--left{
+            padding-top: 50%;
+            padding-bottom: 10rem;
+        }
+
+        &--right{
+            padding-top: 50%;
+            padding-bottom: 10rem;
+        }
+    }
+    &__box{
+        position: relative;
+        &--left{
+            text-align: right;
+        }
+        &--right{
+            text-align: left;
+        }
+    }
+    &__outline{
+        width: 57.2rem;
+        height: 2px;
+        border-top: 1px solid $color-two;
+        position: absolute;
+        top:0;
+        &--left{
+            right:0;
+        }
+        &--right{
+            width: 57.2rem;
+            left: 0;
+        }
+        &--center{
+            position: relative;
+            width: 43.4rem;
+            margin: 0 auto;
+            &-small{
+                width: 28.4rem;
+            }
+        }
+    }
+    &__offset{
+        display: inline-block;
+        width: 21rem;
+        height: 18rem;
+    }
+
+    &__item{
+        width: 10rem;
+        height: 24.2rem;
+        margin: 0 2rem;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        vertical-align: top;
+        & img{
+            width: 100%;            
+        }
+        
+        &--line{
+            width: 2px;
+            height: 5rem;
+            border-right: 1px solid $color-two;
+            margin: 0 auto;     
+            transition: all .5s ease-out;
+        }
+    }
+    &__text{
+        margin-bottom: 2rem;
+    }
+
+    &__inProgress{
+        color: white;
+        text-align: center;
+        font-style: italic;
+    }
+
+}
