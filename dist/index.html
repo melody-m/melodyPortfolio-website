@@ -6,6 +6,7 @@
     <title>Melody's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Roboto|Roboto+Condensed:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 
         
@@ -15,186 +16,273 @@
 
     <section class="landpage">
         <div class="landpage__left">
-            <div class="landpage__title--L">
-                <h1>Melody</h1>
-                <h2>Front-end<br>development</h2>
-            </div>
         </div>
         <div class="landpage__right">
-            <div class="landpage__title--R">
-                <h1>Mahoney</h1>
-                <h2>Web<br>design</h2>
-            </div>
         </div>
 
-        <div class="landpage__enter">
-            <button class="landpage__enter--btn">ENTER</button>
+        <div class="landpage__container">
+            <div class="landpage__title--name"><h1>Melody<br>Mahoney</h1></div>
+            <div class="landpage__title clearfix">
+                <div class="landpage__title--blockW">
+                    <div class="landpage__title--box">                        
+                        <div class="landpage__title--desc"><h2>Front-end<br>development</h2></div>
+                    </div>
+                </div>                                  
+                <div class="landpage__title--frame"></div>
+                <div class="landpage__title--blockG">
+                    <div class="landpage__title--box">                        
+                        <div class="landpage__title--desc"><h2>Web<br>design</h2></div>
+                    </div>
+                </div>
+            </div>
+            <div class="landpage__enter">
+                <button class="landpage__enter--btn">ENTER</button>
+            </div>
         </div>
 
     </section>
 
-    <section class="about">
-        <div class="about__title">
-            <div class="about__title--top">
-                <h3><span class="cap">A</span>b<span class="fill-letter o">o</span>ut</h3>
+    <section class="about hidden">
+
+        <div class="about__container clearfix">
+            <div class="about__number number__box">
+                <div class="number__container">
+                    <div class="number__number number">01</div>
+                    <div class="number__dash number__dash--gold"></div>
+                </div>
             </div>
-            <div class="about__title--bottom">
-                <div class="subtitle">Me</div>
+            <div class="about__presentation clearfix">
+                <h3 class="about__title slideOutRight">About Me</h3>
+                <div class="about__photo slideOutLeft"></div>
+                <div class="about__frame--1"></div>
+                <div class="about__content slideOutRight">
+                    <h4>Hello, I'm Melody</h4>
+                    
+                    <p>I dedicate myself to crafting eye-catching websites with a strong attention to the way users interact with them. 
+                        I stand for building meaningful and engaging digital experiences accessible to all, making a point of developping 
+                        layouts that will adapt to different type of media, whether it's a desktop monitor, a tablet or mobile phone. </p>
+                    <p>Coming from a different career path, my skills are quite varied, including illustration : whether it's a set of icons, 
+                        a character or a full environment, anything is possible.</p>
+                </div>
+                <div class="about__frame--2"></div>
             </div>
         </div>
 
-        <div class="left">
 
-            <div class="about__content">
-                <h4 class="about__subtitle">Hello, I'm Melody</h4>
-                <p>I dedicate myself to crafting eye-catching websites with a strong attention to the way users interact with them. 
-                    I stand for building meaningful and engaging digital experiences accessible to all, making a point of developping 
-                    layouts that will adapt to different type of media, whether it's a desktop monitor, a tablet or mobile phone. </p>
-                <p>Coming from a different career path, my skills are quite varied, including illustration : whether it's a set of icons, 
-                    a character or a full environment, anything is possible.</p>
+        <div class="about__trio">
+            <div class="window__box">
+                <div class="window" id ="win-1">         
+                    <div class="window__side window__side--front">                            
+                        <div class="window__front">                
+                            <div class="window__front--text">In a past life</div>                                
+                            <button class="window__front--btn" id ="winBtn-1">&rarr;</button>
+                        </div>
+                        
+                        
+                    </div>
+            
+                    <div class="window__side window__side--back">
+                        
+                        <div class="window__back--content">
+                            <div class="window__back--close"><button class="window__back--close-btn" id ="close-1">&times;</button></div>
+                            <div class="window__back--title"><h4>In a past life</h4></div>   
+                            <p class="window__back--text">                            
+                            I've worked in the Visual Effects industry as a Lead Environment TD in London, 
+                            and a Virtual Art Department Set Lead in Los Angeles, building CG environments for movies.
+                            <a href="https://youtu.be/R8Ett0Eocdg" target="_blank">Click here</a> to see my demoreel.
+                        </p>
+        
+                            <p class="window__back--text">My collaboration with the Software Department made me discover the world of programming,
+                            as well as UX and UI challenges. Combined with my past Visual Communication and Graphic Design studies, 
+                            it lead me towards front-end web development and web design.</p>
+                        </div>
+                        
+                    </div>    
+                </div>                        
             </div>
+
+            <div class="window__box">
+                <div class="window" id ="win-2">         
+                    <div class="window__side window__side--front">                            
+                        <div class="window__front">                
+                            <div class="window__front--text">Make it happen</div>                                
+                            <button class="window__front--btn" id ="winBtn-2">&rarr;</button>
+                        </div>
+                        
+                        
+                    </div>
+            
+                    <div class="window__side window__side--back">
+                        
+                        <div class="window__back--content">
+                            <div class="window__back--close"><button class="window__back--close-btn" id ="close-2">&times;</button></div>
+                            <div class="window__back--title"><h4>Make it happen</h4></div>   
+                            <p class="window__back--text"> 
+                            It's a passion for anything digital and a strong will to succeed in this new career path that animates me.
+                            I am constantly learning and always up for a new challenge. My previous career gave me a 
+                            broad set of organisational and creative skills as well as a habit to collaborate with a wide range of people.</p>
+        
+                            <p class="window__back--text">To strenghten my skills, I am now looking for an internship or a junior position, if you'd like to talk
+                             about it, please do not hesitate to contact me.</p>
+                        </div>
+                        
+                    </div>    
+                </div>                        
+            </div>
+
+            <div class="window__box">
+                <div class="window" id ="win-3">         
+                    <div class="window__side window__side--front">                            
+                        <div class="window__front">                
+                            <div class="window__front--text">A few fun facts</div>                                
+                            <button class="window__front--btn" id ="winBtn-3">&rarr;</button>
+                        </div>
+                        
+                        
+                    </div>
+            
+                    <div class="window__side window__side--back">
+                        
+                        <div class="window__back--content">
+                            <div class="window__back--close"><button class="window__back--close-btn" id ="close-3">&times;</button></div>
+                            <div class="window__back--title"><h4>A few fun facts</h4></div>   
+                            <ul class="window__back--list">
+                                <li>&ndash; I have lived in 3 different countries</li>
+                                <li>&ndash; I've held the Best Visual Effect Oscar, BAFTA and VES awards for the Jungle Book movie, 
+                                    being part of the incredible team that put it together.</li>
+                                <li>&ndash; I've hidden one of the 'easter egg' Mickey Mouse on the Jungle Book movie.</li>
+                            </ul> 
+                        </div>
+                        
+                    </div>    
+                </div>                        
+            </div>
+
         </div>
-
-        <div class="right">
-            <div class="about__chrono">
-                <div class="about__circle">
-                    <div class="about__circle--text">In a past life <br> &rarr;</div>
-                </div>
-                <div class="about__circle">
-                    <div class="about__circle--text">At this time <br> &rarr;</div>
-                </div>
-                <div class="about__circle">
-                    <div class="about__circle--text">Top 3 fun facts <br> &rarr;</div>
-                </div>
-            </div>
-            <div class="about__line">
-
-                <div class="about__lineBox">
-                    <div class="about__line--tall"></div>
-                </div>
-                <div class="about__lineBox">
-                    <div class="about__line--tall"></div>
-                </div>
-                <div class="about__lineBox">
-                    <div class="about__line--tall"></div>
-                </div>
-            </div>
-
-        </div>
-
     </section>
     
 
-    <section class="skill clearfix">
+    <section class="skill clearfix hidden">
 
+        <div class="container">
+            <div class="skill__number number__box">
+                <div class="number__container">
+                    <div class="number__number number">02</div>
+                    <div class="number__dash number__dash--gold"></div>
+                </div>
+            </div>
+    
             <div class="skill__title">
-                <h3><span class="cap">S</span>kills</h3>
-
+                <h3>My Skills</h3>
+                <div class="skill__title--frame skill__title--frame-1"></div>
+                <div class="skill__title--frame skill__title--frame-2"></div>
             </div>
+        </div>
 
-            <div class="left">
-                <div class="skill__container skill__container--left">
-                    <div class="skill__box skill__box--left">
-                        <div class="skill__outline skill__outline--left"></div>
-                        
-                        <div class="skill__item visibility">
-                            <div class="skill__item--line"></div>
-                            <img src="img/icons/skill_crea.svg" alt="Icon creativity skill">
-                            <div class="skill__text">Creativity</div>
-                        </div>
-        
-                        <div class="skill__item visibility">
-                            <div class="skill__item--line"></div>
-                            <img src="img/icons/skill_web.svg" alt="Icon web design skill">
-                            <div class="skill__text">Web Design</div>
-                        </div>
-        
-                            
-                        <div class="skill__item visibility">
-                            <div class="skill__item--line"></div>
-                            <img src="img/icons/skill_illu.svg" alt="Icon illustration skill">
-                            <div class="skill__text">Illustration</div>
-                        </div>
-                        <div class="skill__offset"></div>
+
+
+        <div class="skill__border">
+            <div class="skill__offset"></div>
+        </div>
+
+        <div class="center">
+            <div class="skill__maxibox">
+                <div class="skill__box">
+                    <div class="skill__outline skill__outline--center-small"></div>
+                    <div class="skill__item visibility">
+                        <div class="skill__item--line"></div>
+                        <img src="img/icons/skill_crea.svg" alt="Icon crea skill" class="skill__img">
+                        <div class="skill__text">Creativity</div>
+                        <div class="skill__item--line"></div>
                     </div>
-                </div>      
+    
+                    <div class="skill__item visibility">
+                        <div class="skill__item--line"></div>
+                        <img src="img/icons/skill_web.svg" alt="Icon web design skill" class="skill__img">
+                        <div class="skill__text">Web Design</div>
+                        <div class="skill__item--line"></div>
+                    </div>
+    
+                    <div class="skill__item visibility">
+                        <div class="skill__item--line"></div>
+                        <img src="img/icons/skill_illu.svg" alt="Icon illustration skill" class="skill__img">
+                        <div class="skill__text">Illustration</div>
+                        <div class="skill__item--line"></div>
+                    </div>         
+                </div>
             </div>
-
-            <div class="right">
-                <div class="skill__container skill__container--right">
-                    <div class="skill__box skill__box--right">
-                        <div class="skill__outline skill__outline--right"></div>
-                        <div class="skill__offset"></div>
-                        <div class="skill__item visibility">
-                            <div class="skill__item--line"></div>
-                            <img src="img/icons/skill_ps.svg" alt="Icon creativity skill">
-                            <div class="skill__text">Photoshop</div>
-                        </div>
-        
-                        <div class="skill__item visibility">
-                            <div class="skill__item--line"></div>
-                            <img src="img/icons/skill_ai.svg" alt="Icon web design skill">
-                            <div class="skill__text">Illustrator</div>
-                        </div>
-        
-                            
-                        <div class="skill__item visibility">
-                            <div class="skill__item--line"></div>
-                            <img src="img/icons/skill_id.svg" alt="Icon illustration skill">
-                            <div class="skill__text">In Design</div>
-                        </div>
+            <div class="skill__maxibox">
+                <div class="skill__box">
+                    <div class="skill__outline skill__outline--center"></div>
+                    <div class="skill__item visibility">
+                        <div class="skill__item--line"></div>
+                        <img src="img/icons/skill_html.svg" alt="Icon Html skill" class="skill__img">
+                        <div class="skill__text">HTML5</div>
+                        <div class="skill__item--line"></div>
                     </div>
-                </div>      
+    
+                    <div class="skill__item visibility">
+                        <div class="skill__item--line"></div>
+                        <img src="img/icons/skill_css.svg" alt="Icon CSS skill" class="skill__img">
+                        <div class="skill__text">CSS3/SASS</div>
+                        <div class="skill__item--line"></div>
+                    </div>
+    
+                    <div class="skill__item visibility">
+                        <div class="skill__item--line"></div>
+                        <img src="img/icons/skill_js.svg" alt="Icon JS skill" class="skill__img">
+                        <div class="skill__text">JS ES5/ES6</div>
+                        <div class="skill__item--line"></div>
+                    </div>    
+                    <div class="skill__item visibility">
+                        <div class="skill__item--line"></div>
+                        <img src="img/icons/skill_git.svg" alt="Icon Git skill" class="skill__img">
+                        <div class="skill__text">Git</div>
+                        <div class="skill__item--line"></div>
+                    </div>      
+                    <div class="skill__outline skill__outline--center"></div>  
+                </div>
             </div>
-
-            <div class="center">
-                <div class="skill__container">
-                    <div class="skill__box">
-                        <div class="skill__outline skill__outline--center"></div>
-                        <div class="skill__item visibility">
-                            <div class="skill__item--line"></div>
-                            <img src="img/icons/skill_html.svg" alt="Icon Html skill" class="skill__img">
-                            <div class="skill__text">Html5</div>
-                            <div class="skill__item--line"></div>
-                        </div>
-        
-                        <div class="skill__item visibility">
-                            <div class="skill__item--line"></div>
-                            <img src="img/icons/skill_css.svg" alt="Icon CSS skill" class="skill__img">
-                            <div class="skill__text">CSS3/Sass</div>
-                            <div class="skill__item--line"></div>
-                        </div>
-        
-                        <div class="skill__item visibility">
-                            <div class="skill__item--line"></div>
-                            <img src="img/icons/skill_js.svg" alt="Icon JS skill" class="skill__img">
-                            <div class="skill__text">JS ES5/ES6</div>
-                            <div class="skill__item--line"></div>
-                        </div>
-        
-                        <div class="skill__item visibility">
-                            <div class="skill__item--line"></div>
-                            <img src="img/icons/skill_git.svg" alt="Icon Git skill" class="skill__img">
-                            <div class="skill__text">Git</div>
-                            <div class="skill__item--line"></div>
-                        </div>      
-                        <div class="skill__outline skill__outline--center"></div>
-
+            <div class="skill__maxibox">
+                <div class="skill__box">
+                    <div class="skill__item visibility">
+                        <div class="skill__item--line"></div>
+                        <img src="img/icons/skill_ps.svg" alt="Icon Photoshop skill" class="skill__img">
+                        <div class="skill__text">Photoshop</div>
+                        <div class="skill__item--line"></div>
                     </div>
+    
+                    <div class="skill__item visibility">
+                        <div class="skill__item--line"></div>
+                        <img src="img/icons/skill_ai.svg" alt="Icon Illustrator skill" class="skill__img">
+                        <div class="skill__text">Illustrator</div>
+                        <div class="skill__item--line"></div>
+                    </div>
+    
+                    <div class="skill__item visibility">
+                        <div class="skill__item--line"></div>
+                        <img src="img/icons/skill_id.svg" alt="Icon In Design skill" class="skill__img">
+                        <div class="skill__text">In Design</div>
+                        <div class="skill__item--line"></div>
+                    </div>   
+                    <div class="skill__outline skill__outline--center-small"></div>      
                 </div>
             </div>
 
-            <div class="left">
+            </div>
+
+            <div class="skill__border">
                 <div class="skill__offset"></div>
             </div>
 
             <div class="center">
-                <div class="skill__container">
+                <h4 class="skill__subtitle">Currently learning</h4>
+                <div class="skill__maxibox">
                     <div class="skill__box">
                         <div class="skill__outline skill__outline--center-small"></div>
                         <div class="skill__item visibility">
                             <div class="skill__item--line"></div>
-                            <img src="img/icons/skill_jq.svg" alt="Icon Jquery skill" class="skill__img">
+                            <img src="img/icons/skill_jq.svg" alt="Icon JQuery skill" class="skill__img">
                             <div class="skill__text">JQuery</div>
                             <div class="skill__item--line"></div>
                         </div>
@@ -202,46 +290,124 @@
                         <div class="skill__item visibility">
                             <div class="skill__item--line"></div>
                             <img src="img/icons/skill_scrum.svg" alt="Icon Scrum skill" class="skill__img">
-                            <div class="skill__text">Agile / Scrum</div>
+                            <div class="skill__text">Agile/Scrum</div>
                             <div class="skill__item--line"></div>
                         </div>
         
                         <div class="skill__item visibility">
                             <div class="skill__item--line"></div>
-                            <img src="img/icons/skill_id.svg" alt="Icon JS skill" class="skill__img">
-                            <div class="skill__text">??</div>
+                            <img src="img/icons/skill_id.svg" alt="Icon React skill" class="skill__img">
+                            <div class="skill__text">React</div>
                             <div class="skill__item--line"></div>
-                        </div>
- 
-                        <div class="skill__outline skill__outline--center-small"></div>
-
+                        </div>   
+                        <div class="skill__outline skill__outline--center-small"></div>      
                     </div>
                 </div>
+
             </div>
+            <div class="skill__border">
+                <div class="skill__offset"></div>
+            </div>
+
+    </section>
+
+    <section class="work hidden">
+        <div class="work__frame"></div>
+        <div class="container">
+            <div class="work__number number__box">
+                <div class="number__container">
+                    <div class="number__number number">03</div>
+                    <div class="number__dash number__dash--gold"></div>
+                </div>
+            </div>
+            <div class="work__title">
+                <h3>Projects</h3>
+                <div class="work__title--frame work__title--frame-2"></div>
+                <div class="work__title--frame work__title--frame-1"></div>
+            </div>
+        </div>
+
+        <div class="gallery">
+
+            <div class="gallery__container">
+
+                <div class="gallery__square">
+                    <div class="gallery__img gallery__img--1"></div>
+                    <div class="gallery__content">
+                        <div class="gallery__content--text">R & M's Wedding website <span class="gallery__arrow">&rarr;</span></div>
+                        <div class="gallery__content--btn"></div>
+                    </div>                                       
+                </div>
+                <div class="gallery__square">
+                    <div class="gallery__img gallery__img--2"></div>
+                    <div class="gallery__content">
+                        <div class="gallery__content--text">Discover California website <span class="gallery__arrow">&rarr;</span></div>
+                        <div class="gallery__content--btn"></div>
+                    </div>                                         
+                </div>
+                <div class="gallery__square">
+                    <div class="gallery__img gallery__img--3"></div>
+                    <div class="gallery__content">
+                        <div class="gallery__content--text">Busy Bee Studio website <span class="gallery__arrow">&rarr;</span></div>
+                        <div class="gallery__content--btn"></div>
+                    </div>                              
+                </div>
+                <div class="gallery__square">
+                    <div class="gallery__img gallery__img--4"></div>
+                    <div class="gallery__content">
+                        <div class="gallery__content--text">Dots application website <span class="gallery__arrow">&rarr;</span></div>
+                        <div class="gallery__content--btn"></div>
+                    </div>                                        
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="contact hidden">
+
+        <div class="container contact__container">
+                <div class="contact__number number__box">
+                    <div class="number__container">
+                        <div class="number__number number">04</div>
+                        <div class="number__dash number__dash--gold"></div>
+                    </div>
+                </div>
     
-                
-    
-                <!-- <h4>In Progress</h4>
-    
-                <p class="skill__inProgress margin-bottom-medium">(Because a young padawan has a lot to learn)</p>
-    
-                <div class="skill__container">
-                    <div class="skill__item">
-                            <img src="img/icons/skill_jq.svg" alt="Icon Jquery skill" class="skill__img">
-                            <div class="skill__text">JQuery</div>
+                <div class="about__presentation clearfix">
+                    <h3 class="about__title">Contact Me</h3>
+                    <div class="contact__photo"></div>
+                    <div class="about__frame--1"></div>
+                    <div class="contact__content">
+                        <h4>Want to say Hi?</h4>
+                        
+                        <div class="contact__form">
+                          <form action="action_page.php">
+                        
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">                       
+                            
+                        
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                        
+                            <input type="submit" value="Submit &rarr;" id="submit">
+                        
+                          </form>
                         </div>
-        
-                        <div class="skill__item">
-                            <img src="img/icons/skill_scrum.svg" alt="Icon Scrum skill" class="skill__img">
-                            <div class="skill__text">Scrum</div>
-                        </div>
-        
-                        <div class="skill__item">
-                            <img src="img/icons/skill_id.svg" alt="Icon In Desin skill" class="skill__img">
-                            <div class="skill__text">?????</div>
-                        </div>
-    
-                </div> -->
+                    </div>
+                    <div class="about__frame--2"></div>
+                </div>
+            </div>
+    </section>
+    <section class="footer hidden">
+        <p class="copyright">
+            &copy; Copyright 2019 design by Melody Mahoney.
+        </p>
     </section>
 
 

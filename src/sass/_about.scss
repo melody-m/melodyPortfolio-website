@@ -1,84 +1,212 @@
 .about{
-    position: relative;
-    height: 100vh;
+    position: relative;     
+    background-image: linear-gradient(to right, white 50%, rgba($color-two, .1) 50%);  
 
+    &__container{
+        margin: 0 auto;
+        padding: 15rem 0;
+        width: 120rem;
+        position: relative;
+    }
+    &__presentation{
+        position: relative;
+        padding-left: 10%;
+              
+    }
+    &__number{
+        top: 20rem;
+    }
     &__title{
         position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -10%);
+        top: 5.7rem;
+        right: 12rem;
         z-index: 200;
-        &--top{
-            transform: translateX(-1.5rem);
-            position: relative;
-        }
-        &--bottom{
-            transform: translateX(1.35rem);
-        }
+        color: $color-two;
+        transition: all .5s ease-out;
     }
 
+    &__photo{
+        width: 50%;
+        height: 50rem;
+        position: relative;
+        background-image: url(../img/about.jpg);
+        @include bgCenter;
+        background-color: $color-three;
+        float: left;    
+        z-index:20;  
+        transition: all .5s ease-out;
+    }
+    &__frame{
+        &--1{
+            width: 45%;
+            height: 50rem;
+            position: absolute;
+            top: 3.9rem;
+            left: 7.6rem;
+            border: 1px solid $color-two;
+            z-index:0;
+        }
+        &--2{
+            width: 50%;
+            height: 33.5rem;
+            position: absolute;
+            top: 5.5rem;
+            right: 5rem;
+            border: 1px solid $color-two;
+            z-index:0;
+
+        }
+    }
     &__content{
-       margin: 0 auto;
-       margin-top: 45%;
-       width: 60%;
-       text-align: justify;
-       & p{
-           margin-bottom: 2rem;
-       }
-    }
+        width: 50%;
+        position: absolute;
+        bottom: 5rem;
+        left: 40%;      
+        background-color:white;     
+        padding: 5rem;
+        z-index: 100;
+        & p{
+            margin-bottom: 2rem;
+        }
 
-    &__subtitle{
-        margin-bottom: 4rem;
-        text-align: right;
+        transition: all .5s ease-out;
     }
-
-    &__chrono{
+    &__trio{
+        width: 120rem;
         text-align: center;
-        margin-top: 53%;      
+        margin: 0 auto;
+        padding-bottom: 20rem;
+       
     }
-    &__line{
-        height: 6rem;
-        text-align: center;
-        border-bottom: 1px solid $color-two;
-        position: relative;
-        &Box{
-            width: 15rem;
-            height: 100%;
-            margin: 0 1.5rem;
-            display: inline-block;
-            text-align: center;
-        }
-        &--tall{
-            width: 2px;
-            height: 100%;
-            display: inline-block;
-            border-right: 1px solid $color-two;
-        }
-    }
-
-    &__circle{
-        display: inline-block;
-        width: 15rem;
-        height: 15rem;
-        margin: 0 1.5rem;
-        background-color: rgba($color-four,.5);
-        border-radius: 50%;
-        position: relative;
-
-        &--text{
-            @include absCenter;
-        }
-    }
-
 }
 
-// .blank{
-//     width:2rem;
-//     height: 4rem;
-//     background-color: white;
-//     border-radius: 50%;
-//     position: absolute;
-//     top: 4rem;
-//     left: 53%;
-//     z-index:100;
-// }
+
+.window{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+    &__box{
+        display: inline-block;
+        width: 32rem;
+        height: 32rem;
+        padding: 2rem;
+        margin: 2rem;
+        position: relative;
+        border: 1px solid $color-three;
+    }    
+
+    &__side{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: all .8s ease;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        overflow: hidden;
+
+        &--back{
+            transform: rotateY(180deg); 
+        }
+    }
+
+    &__front{
+        width: 28rem;
+        height: 28rem;      
+        position: relative;
+        background-color: $color-two;       
+        z-index:20;
+
+        &--text{
+            width: 8.5rem;
+            position: absolute;
+            bottom: 0rem;
+            left: 2rem;
+            padding: 1rem;
+            border-left: 2px solid $color-grey;
+            text-align: left;
+
+        }
+        &--btn{
+            background-color: transparent;
+            border: none;
+            padding: 1rem;
+            position: absolute;
+            bottom: 1rem;
+            right: 2rem;
+            cursor: pointer;
+            z-index:500;
+        }
+    }
+
+    &__back{
+
+        &--content{            
+            position: relative;                
+        }
+        &--title{
+            margin-bottom: 2rem;
+        }
+        &--text{
+            margin-bottom: 1rem;
+
+            & a {
+                color: $color-three;
+            }
+        }
+        &--list{
+            padding-top: 1rem;
+            list-style: none;
+            & li{
+                margin: 2rem 0;
+            }
+        }
+        &--close{   
+            position: absolute;
+            top: -1rem;
+            right: 0;
+            outline: none;
+
+            &-btn{
+                background-color: transparent;
+                border:none;             
+                font-size: 3rem;
+                color: $color-three;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slideOutLeft{
+    transform: translateX(-160%);
+}
+
+.slideOutRight{
+    transform: translateX(160%);
+}
+.slideIn{
+    transform:translateX(0);
+}
+
+.hidden{
+    display: none;
+}

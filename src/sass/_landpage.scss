@@ -13,7 +13,7 @@
         float: left;
         position: relative;
         background-image: url(../img/landpage_L.png);
-        background-position: top;
+        background-position: right;
         background-size: cover;
         transition: all .5s ease-in-out;
     }
@@ -23,39 +23,94 @@
         float: right;
         position: relative;
         background-image: url(../img/landpage_R.png);
-        background-position: top;
+        background-position: left;
         background-size: cover;
         transition: all .5s ease-in-out;
     }
 
-    &__title{
-        &--L{
-            position: absolute;
-            top: 50%;
-            right: 0;      
-            text-align: right;  
-
-            border-right: 1px solid white;
-            //background-color: rgba(black, .7);
-            padding-right: 1rem;
-            //padding: 2rem 3rem;
-            text-shadow: 1px 1px 10px black;
-        }
-        &--R{
-            position: absolute;
-            top: 50%;
-            left: 0;
-            //background-color: rgba(black, .7);
-            padding-left: 1rem;
-            text-shadow: 1px 1px 10px black;
-        }
+    &__container{
+        width: 100%;            
+        height: 100%;    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .5s ease-in-out;
     }
+
+    &__title{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        &--blockW{
+            width: 20rem;
+            height:20rem;
+            background-color: white;
+            color: $color-grey-dark-1;
+            position: absolute;
+            top: 38%;
+            left: 39%;
+            padding: 2rem;
+            z-index: 500;
+            transition: all .6s ease-in-out;
+        }
+        &--blockG{
+            width: 20rem;
+            height:20rem;
+            background-color: $color-grey;
+            color: $color-two;
+            position: absolute;
+            top: 45%;
+            left: 48%;
+            padding: 2rem;
+            z-index: 400;
+            transition: all .6s ease-in-out;
+        }
+
+        &--box{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        &--name{
+            
+            position: absolute;
+            top: 40%;
+            left:50%;
+            transform: translate(-50%,-40%);
+            background-color: $color-two;
+            color: white;
+            padding: 1rem 2rem;
+            z-index:600;
+            transition: all .6s ease-in-out;
+            
+
+        }
+        &--desc{
+            text-align: right;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        &--frame{            
+            width: 40rem;
+            height:23rem;
+            border: 1px solid $color-two;
+            position: absolute;
+            top: 38%;
+            left: 37%;                
+            padding: 2rem;
+            z-index: 100;    
+            transition: all .3s ease-in-out;        
+        }
+   }
     &__enter{
         position: absolute;
-        top: 70%;
+        top: 80%;
         left: 50%;
-        transform: translate(-50%, -70%);
+        transform: translate(-50%, -80%);
         transition: all .5s ease-in-out;
+        outline: none;
 
         &--btn{
             color: white;
@@ -63,7 +118,7 @@
             background-color: $color-two;
             padding: 1rem 2rem;
             cursor: pointer;
-            box-shadow: 1px 1px 3px black;
+            box-shadow: 1px 1px 20px black;
             transition: all .3s ease-out;
 
             &:hover{

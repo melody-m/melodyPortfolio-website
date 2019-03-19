@@ -40,6 +40,32 @@ body {
     clear: both;
 }
 
+.container{
+	width: 120rem;
+	margin: 0 auto;
+	position: relative;
+}
+.number{
+	&__box{
+	position: absolute;
+	left: 8.5rem;
+	z-index: 50;
+	}
+	&__container{
+		position: relative;
+	}
+	&__dash{
+		width: 6rem;
+		height: 3px;
+		position: absolute;
+		top: 15rem;
+		left: 0;
+		z-index:50;
+		&--gold{background-color: $color-three;}
+		&--pink{background-color: $color-two;}
+	}
+}
+
 
 .left{
 	width: 50%;
@@ -59,4 +85,12 @@ body {
 	width: 100%;
 	margin: 0 auto;
 
+}
+
+.margin_bottom_large{
+	margin-bottom: 10rem;
+}
+
+.margin_top_large{
+	margin-top: 10rem;
 }

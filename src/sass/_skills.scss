@@ -1,15 +1,70 @@
 
 .skill{
     position: relative;
+    background-image: linear-gradient(to right, $color-grey-dark-1 50%,  $color-grey-dark-2 50%);
+    color: $color-two-light;
+
+
+    &__number{
+        top: 8rem;
+    }
+
+
 
     &__title{
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -10%);
-        z-index: 200;
+
+        text-align: center;
+        padding: 15rem 0;
+        position: relative;
+        h3{
+            position: relative;
+            display: inline;
+            color:$color-grey;
+            background-image: linear-gradient(to right, $color-grey-dark-1 50%,  $color-grey-dark-2 50%);
+            padding:1rem;
+            z-index: 200;
+        }
+        &--number{
+            position: absolute;
+            top: 1rem;
+            left: 8%;
+        }
+        &--frame{
+            position: absolute;
+            border: 1px solid $color-two;
+            z-index: 10;
+            
+            &-1{
+                width:25%;
+                height:24%;
+                top:50%;
+                left:43%;
+                
+            }
+            &-2{
+                width:30%;
+                height:32%;
+                top:30%;
+                left:33%;
+                
+            }
+        }
     }
-    &__container{
+    &__subtitle{
+        color:$color-three;
+        text-align: center;
+        padding-top: 1rem;
+
+    }
+
+    &__border{
+        width: 50%;
+        height: 100%;
+        float: left;
+        border-right: 1px solid $color-two;
+    }
+
+    &__maxibox{
         width: 100%;
         text-align: center;
         &--left{
@@ -24,45 +79,34 @@
     }
     &__box{
         position: relative;
-        &--left{
-            text-align: right;
-        }
-        &--right{
-            text-align: left;
-        }
     }
     &__outline{
-        width: 57.2rem;
-        height: 2px;
-        border-top: 1px solid $color-two;
+
+        height: 1px;
+        background-color: $color-two;  
         position: absolute;
         top:0;
-        &--left{
-            right:0;
-        }
-        &--right{
-            width: 57.2rem;
-            left: 0;
-        }
+
         &--center{
             position: relative;
-            width: 43.4rem;
+            width: 55.2rem;
             margin: 0 auto;
-            &-small{
-                width: 28.4rem;
-            }
+        }
+        &--center-small{
+            position: relative;
+            width: 36.8rem;
+            margin: 0 auto;
         }
     }
     &__offset{
-        display: inline-block;
-        width: 21rem;
-        height: 18rem;
+        width: 100%;
+        height: 20rem;
     }
 
     &__item{
         width: 10rem;
         height: 24.2rem;
-        margin: 0 2rem;
+        margin: 0 4rem;
         display: inline-block;
         position: relative;
         text-align: center;
@@ -72,11 +116,12 @@
         }
         
         &--line{
-            width: 2px;
-            height: 5rem;
-            border-right: 1px solid $color-two;
+            width: 1px;
+            height: 5rem;            
+            background-color: $color-two;              
             margin: 0 auto;     
             transition: all .5s ease-out;
+
         }
     }
     &__text{

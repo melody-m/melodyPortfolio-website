@@ -4,86 +4,85 @@
 
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.6rem;
-    color: $color-one;
+    color: $color-one-light;
 }
 
 h1{
-    font-family: 'EB Garamond', serif;
-    font-size: 4rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
     font-weight: 400;
     letter-spacing: .2rem;
-    color: white;
-    text-transform: uppercase;
 }
 
 h2{
-    font-family: 'Roboto Condensed', sans-serif;
-    color: white;
-    font-size: 1.8rem;
+    font-family: 'Roboto Condensed', sans-serif;    
+    font-size: 2rem;
     font-weight: 300;
     text-transform: uppercase;
 }
 
 h3{
-    font-family: 'EB Garamond', serif;
-    text-transform: uppercase;
-    font-size: 6rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem;
     line-height: 6rem;
     vertical-align: bottom;
-    font-weight: 300;
-    color: $color-two; 
+    font-weight: 700;
 }
 
 h4{
-    font-family: 'EB Garamond', serif;
-    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.8rem;
     font-weight: 400;
-    letter-spacing: .1rem;
+    letter-spacing: .2rem;
     color: $color-three;
+    margin-bottom: 2rem;
 }
 
-.cap{
-    font-size: 12rem;
-}
+.window{
 
-.subtitle{
-    font-size: 6rem;
-    font-family: 'EB Garamond', serif;
-    line-height: 6rem;
-    font-weight: 300;
-    color: $color-two;
-    font-variant: small-caps;
-    text-align: center;
-}
-
-.about{
-    &__circle{
+    &__front{
         &--text{
-            font-family: 'EB Garamond', serif;
-            color: $color-two;
-            font-size: 2.5rem;
-            text-align: center;
+            font-size: 4rem;
+            line-height: 6rem;
+            font-family: 'Playfair Display', serif;
+            color: white;
+        }
+        &--btn{
+            font-size: 3rem;
+            color: white;
         }
     }
 }
 
+.gallery__content--text{
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    
+}
+
+.number{
+    font-size: 12rem;
+    font-family: 'Playfair Display', serif;
+    color: $color-grey-medium;
+}
 
 
-.fill-letter {
-    position: relative;
-  }
-  .fill-letter:after {
-    display: block;
-    content: "";
-    position: absolute;
-  }
-  .o:after {
-    background-color: white;
-    height: 45%;
-    left: 25%;
-    top: 30%;
-    width: 50%;
-    z-index: -1;
-  }
+// .fill-letter {
+//     position: relative;
+//   }
+//   .fill-letter:after {
+//     display: block;
+//     content: "";
+//     position: absolute;
+//   }
+//   .o:after {
+//     background-color: $color-six;
+//     height: 45%;
+//     left: 25%;
+//     top: 30%;
+//     width: 50%;
+//     z-index: -1;
+//   }

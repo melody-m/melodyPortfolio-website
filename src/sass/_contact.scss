@@ -1,0 +1,51 @@
+.contact{
+    padding: 15rem 0;
+    background-image: linear-gradient(to right, white 50%, $color-grey 50%);
+    &__container{
+        height: 70rem;
+    }
+
+    &__number{
+        top: 5rem;
+    }
+
+    &__content{
+        width: 60%;
+        position: absolute;
+        bottom: -20rem;
+        left: 40%;      
+        background-color:white;     
+        padding: 5rem;
+        z-index: 100;
+    }
+
+    &__photo{
+        width: 50%;
+        height: 50rem;
+        position: relative;
+        background-image: url(../img/post.jpg);
+        @include bgCenter;
+        float: left;    
+        z-index:20;  
+        transition: all .5s ease-out;
+    }
+
+}
+
+#submit{
+    background-color: $color-two;
+    padding: 1rem 2rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 1.2rem; 
+    border: 1px solid #ccc;
+    border-radius: 4px;    
+    margin-top: 1rem;
+    margin-bottom: 1.6rem;
+    resize: vertical;
+  }
