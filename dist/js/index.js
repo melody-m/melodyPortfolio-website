@@ -95,3 +95,47 @@ const windowDOM = {
     })
   })
   
+
+  const web = document.getElementById('web-1');
+
+  web.addEventListener('click', () => {
+    document.querySelector('.project').style.height = "100vh";
+
+    setTimeout(() => {
+      
+      document.querySelector('.project__column--left').classList.replace('slideOutLeft','slideIn');
+      document.querySelector('.project__column--right').classList.replace('slideOutRight','slideIn');
+    }, 200)
+  })
+
+  //////////////////////////////
+  //MEDIA CHANGE
+  
+  const mediaBtn =  document.querySelectorAll('.project__btn');
+  const mediaBtnArr = Array.from(mediaBtn);
+  const mediaCont =  document.querySelectorAll('.project__device');
+
+  const media = new Map();
+
+
+function mediaMatch(){   
+  for (let i=0; i < mediaBtnArr.length; i++){
+    media.set(mediaBtnArr[i], mediaCont[i]);
+  }
+}
+
+mediaMatch();
+
+function changeMedia(media) {
+  mediaCont.forEach((cur) =>{
+    cur.classList.add('mediaHidden');
+  })
+  media.classList.remove('mediaHidden');
+}
+
+mediaBtnArr.forEach((cur) => {
+  cur.addEventListener('click', () => {
+    const selector = media.get(cur);
+    changeMedia(selector);
+  })
+})

@@ -72,13 +72,17 @@
         float: left;
         position: relative;
         border-right:1px solid $color-two;
-        overflow: hidden;     
+        overflow: hidden;    
+        
+        & a {
+            cursor: pointer;
+        }
         
         &:hover .gallery__img{
             transform: scale(1.2);
         }
-        &:hover .gallery__arrow{
-            font-size: 4rem;
+        &:hover .gallery__content--text{
+            padding-bottom: 8rem;
         }
     }
 
@@ -98,6 +102,7 @@
             padding: 2rem;
             padding-bottom: 4rem;
             color: white;
+            transition: all .3s ease-out;
         }
     }
 
@@ -137,9 +142,6 @@
                 url(../img/website_04.jpg);
         }
         
-    }
-    &__arrow{
-        transition: all .3s ease-out;
     }
         
 }

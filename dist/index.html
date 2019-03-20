@@ -51,11 +51,11 @@
                     <div class="number__dash number__dash--gold"></div>
                 </div>
             </div>
-            <div class="about__presentation clearfix">
-                <h3 class="about__title slideOutRight">About Me</h3>
-                <div class="about__photo slideOutLeft"></div>
-                <div class="about__frame--1"></div>
-                <div class="about__content slideOutRight">
+            <div class="box__presentation clearfix">
+                <h3 class="box__title about__title slideOutRight">About Me</h3>
+                <div class="box__photo about__photo slideOutLeft"></div>
+                <div class="box__frame--1"></div>
+                <div class="box__content about__content slideOutRight">
                     <h4>Hello, I'm Melody</h4>
                     
                     <p>I dedicate myself to crafting eye-catching websites with a strong attention to the way users interact with them. 
@@ -64,20 +64,22 @@
                     <p>Coming from a different career path, my skills are quite varied, including illustration : whether it's a set of icons, 
                         a character or a full environment, anything is possible.</p>
                 </div>
-                <div class="about__frame--2"></div>
+                <div class="box__frame--2 about__frame--2"></div>
             </div>
         </div>
 
 
         <div class="about__trio">
             <div class="window__box">
+                
                 <div class="window" id ="win-1">         
                     <div class="window__side window__side--front">                            
-                        <div class="window__front">                
+                        <div class="window__front">    
+                            <button class="window__front--btn" id ="winBtn-1">
                             <div class="window__front--text">In a past life</div>                                
-                            <button class="window__front--btn" id ="winBtn-1">&rarr;</button>
-                        </div>
-                        
+                            <div class="window__front--arrow">&rarr;</div>
+                            </button>
+                        </div>                        
                         
                     </div>
             
@@ -105,8 +107,10 @@
                 <div class="window" id ="win-2">         
                     <div class="window__side window__side--front">                            
                         <div class="window__front">                
-                            <div class="window__front--text">Make it happen</div>                                
-                            <button class="window__front--btn" id ="winBtn-2">&rarr;</button>
+                            <button class="window__front--btn" id ="winBtn-2">
+                                <div class="window__front--text">Make it happen</div>                                
+                                <div class="window__front--arrow">&rarr;</div>
+                            </button>
                         </div>
                         
                         
@@ -134,8 +138,10 @@
                 <div class="window" id ="win-3">         
                     <div class="window__side window__side--front">                            
                         <div class="window__front">                
-                            <div class="window__front--text">A few fun facts</div>                                
-                            <button class="window__front--btn" id ="winBtn-3">&rarr;</button>
+                            <button class="window__front--btn" id ="winBtn-3">
+                                <div class="window__front--text">A few fun facts</div>                                
+                                <div class="window__front--arrow">&rarr;</div>
+                            </button>
                         </div>
                         
                         
@@ -332,11 +338,13 @@
             <div class="gallery__container">
 
                 <div class="gallery__square">
-                    <div class="gallery__img gallery__img--1"></div>
-                    <div class="gallery__content">
-                        <div class="gallery__content--text">R & M's Wedding website <span class="gallery__arrow">&rarr;</span></div>
-                        <div class="gallery__content--btn"></div>
-                    </div>                                       
+                    <a href="#wedding-website" id="web-1">
+                        <div class="gallery__img gallery__img--1"></div>
+                        <div class="gallery__content">
+                            <div class="gallery__content--text">R & M's Wedding website <span class="gallery__arrow">&rarr;</span></div>
+                            <div class="gallery__content--btn"></div>
+                        </div> 
+                    </a>                                      
                 </div>
                 <div class="gallery__square">
                     <div class="gallery__img gallery__img--2"></div>
@@ -365,6 +373,92 @@
 
     </section>
 
+    <section class="project">
+        <div class="project__wedding clearfix" id="wedding-website">
+            <div class="project__column project__column--left">
+                <h3 class="project__title">R & M's Wedding website</h3>
+                <div class="project__frame--1"></div>
+
+                <div class="project__content">
+                    <h4>Description</h4>
+                    <p>Wedding websites are becomming particularly popular as they allow couples to share a lot of
+                        information in one single place as well as manage reservations in a much easier way than collecting rsvp cards.
+                        Although a lot of platform exists to create them, the themes to choose from are quite restrained and there's a good chance they won't
+                        match the theme and colours of the wedding.
+    
+                        It was definitely the case for us : the venue and design choices we had made wouldn't translate to a template. 
+                    </p>  
+                    <p>
+                        The goal of this website were :
+                        <ul>
+                            <li>&ndash; easy to use : a simple design that doesn't confuse the users,</li>
+                            <li>&ndash; to be informative,</li>
+                            <li>&ndash; easy to maintain and add new sections when needed,</li>
+                            <li>&ndash; responsive on all the main devices : desktop, tablets and phones,</li>
+                            <li>&ndash; to adapt to older browsers,</li>
+                            <li>&ndash; to respect the design of the invitations.</li>
+                        </ul>         
+                    </p>
+                    <h4>Design</h4>
+                    <p>We've kept the blue and peach colors of the chosen palette as well as the handwritten font of the invitations all the way through. 
+                        The website is split in clear categories to help the users navigate. There are a few animations,
+                        very discreet to avoid confusion and long loading time.
+                    </p>
+                    <p class="project__content--link">
+                        <a href="">See my code on github &rarr;</a> 
+                    </p>
+                </div>
+
+                <div class="project__frame--2"></div>
+                
+            </div>
+            <div class="project__column project__column--right">
+                <div class="project__media">
+                    <button class="project__btn project__btn--desktop"><img src="img/icons/media_desktop.svg" alt="Icon desktop"></button>
+                    <button class="project__btn project__btn--tablet"><img src="img/icons/media_tablet.svg" alt="Icon tablet"></button>
+                    <button class="project__btn project__btn--phone"><img src="img/icons/media_phone.svg" alt="Icon phone"></button>
+                </div>
+
+                <div class="project__device project__desktop">
+                    <div class="project__desktop--monitor">
+                        <img src="img/desktop.png" alt="">
+                        <div class="project__desktop--screen">
+                            <div class="project__desktop--screen-in">
+                                <img src="img/wedding_website_desktop.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="project__device project__tablet mediaHidden">
+                    <div class="project__tablet--monitor">
+                        <img src="img/tablet.png" alt="">
+                        <div class="project__tablet--screen">
+                            <div class="project__tablet--screen-in">
+                                <img src="img/wedding_website_tablet.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="project__device project__phone mediaHidden">
+                    <div class="project__phone--monitor">
+                        <img src="img/phone.png" alt="">
+                        <div class="project__phone--screen">
+                            <div class="project__phone--screen-in">
+                                <img src="img/wedding_website_phone.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="project__link">
+                    <button class="project__link--btn">VISIT THE WEBSITE</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
     <section class="contact hidden">
 
         <div class="container contact__container">
@@ -375,11 +469,11 @@
                     </div>
                 </div>
     
-                <div class="about__presentation clearfix">
-                    <h3 class="about__title">Contact Me</h3>
-                    <div class="contact__photo"></div>
-                    <div class="about__frame--1"></div>
-                    <div class="contact__content">
+                <div class="box__presentation clearfix">
+                    <h3 class="box__title contact__title">Contact Me</h3>
+                    <div class="box__photo contact__photo"></div>
+                    <div class="box__frame--1"></div>
+                    <div class="box__content contact__content">
                         <h4>Want to say Hi?</h4>
                         
                         <div class="contact__form">
@@ -400,7 +494,7 @@
                           </form>
                         </div>
                     </div>
-                    <div class="about__frame--2"></div>
+                    <div class="box__frame--2 contact__frame--2"></div>
                 </div>
             </div>
     </section>

@@ -67,18 +67,6 @@ body {
 }
 
 
-.left{
-	width: 50%;
-    height: 100%;
-    float: left;
-    border-right: 1px solid $color-two;
-}
-
-.right{
-	width: 50%;
-    height: 100%;
-    float: left;
-}
 
 .center{
 	float: left;
@@ -87,10 +75,54 @@ body {
 
 }
 
-.margin_bottom_large{
-	margin-bottom: 10rem;
-}
+.box{
+    position: relative;     
 
-.margin_top_large{
-	margin-top: 10rem;
+    &__presentation{
+        position: relative;
+        padding-left: 10%;              
+    }
+
+    &__title{
+        position: absolute;
+        z-index: 200;
+        color: $color-two;
+        transition: all .5s ease-out;
+    }
+
+    &__photo{
+        width: 50%;
+        height: 50rem;
+        position: relative;
+        @include bgCenter;
+        background-color: $color-three;
+        float: left;    
+        z-index:20;  
+        transition: all .5s ease-out;
+    }
+    &__frame{
+        &--1{
+            width: 52.5rem;
+            height: 50rem;
+            position: absolute;
+            top: 3.9rem;
+            left: 7.6rem;
+            border: 1px solid $color-two;
+            z-index:0;
+        }
+        &--2{
+			width: 50%;
+            height: 33.5rem;
+            position: absolute;
+            border: 1px solid $color-two;
+            z-index:0;
+        }
+    }
+    &__content{
+        width: 50%;
+        position: absolute;      
+        background-color:white;     
+        padding: 5rem;
+        z-index: 100;
+    }
 }

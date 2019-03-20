@@ -10,12 +10,6 @@
     background-position: center;
 }
 
-@mixin bgContain{
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 //MIXINS MEDIA QUERIES
 
 @mixin  respond($breakpoint) {

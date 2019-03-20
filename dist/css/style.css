@@ -108,27 +108,51 @@ body {
   .number__dash--pink {
     background-color: #ff4545; }
 
-.left {
-  width: 50%;
-  height: 100%;
-  float: left;
-  border-right: 1px solid #ff4545; }
-
-.right {
-  width: 50%;
-  height: 100%;
-  float: left; }
-
 .center {
   float: left;
   width: 100%;
   margin: 0 auto; }
 
-.margin_bottom_large {
-  margin-bottom: 10rem; }
-
-.margin_top_large {
-  margin-top: 10rem; }
+.box {
+  position: relative; }
+  .box__presentation {
+    position: relative;
+    padding-left: 10%; }
+  .box__title {
+    position: absolute;
+    z-index: 200;
+    color: #ff4545;
+    transition: all .5s ease-out; }
+  .box__photo {
+    width: 50%;
+    height: 50rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-color: #dd9230;
+    float: left;
+    z-index: 20;
+    transition: all .5s ease-out; }
+  .box__frame--1 {
+    width: 52.5rem;
+    height: 50rem;
+    position: absolute;
+    top: 3.9rem;
+    left: 7.6rem;
+    border: 1px solid #ff4545;
+    z-index: 0; }
+  .box__frame--2 {
+    width: 50%;
+    height: 33.5rem;
+    position: absolute;
+    border: 1px solid #ff4545;
+    z-index: 0; }
+  .box__content {
+    width: 50%;
+    position: absolute;
+    background-color: white;
+    padding: 5rem;
+    z-index: 100; }
 
 .landpage {
   width: 100vw;
@@ -245,53 +269,19 @@ body {
     padding: 15rem 0;
     width: 120rem;
     position: relative; }
-  .about__presentation {
-    position: relative;
-    padding-left: 10%; }
   .about__number {
     top: 20rem; }
   .about__title {
-    position: absolute;
     top: 5.7rem;
-    right: 12rem;
-    z-index: 200;
-    color: #ff4545;
-    transition: all .5s ease-out; }
+    right: 12rem; }
   .about__photo {
-    width: 50%;
-    height: 50rem;
-    position: relative;
-    background-image: url(../img/about.jpg);
-    background-size: cover;
-    background-position: center;
-    background-color: #dd9230;
-    float: left;
-    z-index: 20;
-    transition: all .5s ease-out; }
-  .about__frame--1 {
-    width: 45%;
-    height: 50rem;
-    position: absolute;
-    top: 3.9rem;
-    left: 7.6rem;
-    border: 1px solid #ff4545;
-    z-index: 0; }
+    background-image: url(../img/about.jpg); }
   .about__frame--2 {
-    width: 50%;
-    height: 33.5rem;
-    position: absolute;
     top: 5.5rem;
-    right: 5rem;
-    border: 1px solid #ff4545;
-    z-index: 0; }
+    right: 5rem; }
   .about__content {
-    width: 50%;
-    position: absolute;
     bottom: 5rem;
     left: 40%;
-    background-color: white;
-    padding: 5rem;
-    z-index: 100;
     transition: all .5s ease-out; }
     .about__content p {
       margin-bottom: 2rem; }
@@ -315,7 +305,10 @@ body {
     padding: 2rem;
     margin: 2rem;
     position: relative;
-    border: 1px solid #dd9230; }
+    border: 1px solid #dd9230;
+    transition: all .3s ease-in-out; }
+    .window__box:hover {
+      transform: scale(1.1); }
   .window__side {
     position: absolute;
     top: 0;
@@ -333,6 +326,13 @@ body {
     position: relative;
     background-color: #ff4545;
     z-index: 20; }
+    .window__front--btn {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 500; }
     .window__front--text {
       width: 8.5rem;
       position: absolute;
@@ -341,15 +341,10 @@ body {
       padding: 1rem;
       border-left: 2px solid #eeeeee;
       text-align: left; }
-    .window__front--btn {
-      background-color: transparent;
-      border: none;
-      padding: 1rem;
+    .window__front--arrow {
       position: absolute;
-      bottom: 1rem;
-      right: 2rem;
-      cursor: pointer;
-      z-index: 500; }
+      bottom: 2rem;
+      right: 4rem; }
   .window__back--content {
     position: relative; }
   .window__back--title {
@@ -542,10 +537,12 @@ body {
   position: relative;
   border-right: 1px solid #ff4545;
   overflow: hidden; }
+  .gallery__square a {
+    cursor: pointer; }
   .gallery__square:hover .gallery__img {
     transform: scale(1.2); }
-  .gallery__square:hover .gallery__arrow {
-    font-size: 4rem; }
+  .gallery__square:hover .gallery__content--text {
+    padding-bottom: 8rem; }
 
 .gallery__content {
   position: absolute;
@@ -561,7 +558,8 @@ body {
     border-left: 1px solid white;
     padding: 2rem;
     padding-bottom: 4rem;
-    color: white; }
+    color: white;
+    transition: all .3s ease-out; }
 
 .gallery__img {
   width: 100%;
@@ -578,8 +576,187 @@ body {
   .gallery__img--4 {
     background-image: linear-gradient(to bottom, #212121, rgba(48, 48, 48, 0.8)), url(../img/website_04.jpg); }
 
-.gallery__arrow {
-  transition: all .3s ease-out; }
+.project {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #212121;
+  z-index: 1000;
+  overflow: scroll;
+  transition: all .5s ease-out; }
+  .project__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    color: #ff4545; }
+  .project__column {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 4rem;
+    position: relative;
+    transition: all .5s ease-out; }
+    .project__column--left {
+      background-color: #eeeeee; }
+    .project__column--right {
+      background-color: #212121;
+      padding-left: 5rem; }
+  .project__frame--1 {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 8rem;
+    left: 5rem;
+    border: 1px solid #ff4545; }
+  .project__frame--2 {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    bottom: 5rem;
+    right: 6rem;
+    border: 1px solid #dd9230; }
+  .project__content {
+    width: 85%;
+    margin: 0 auto;
+    padding: 4rem;
+    text-align: justify;
+    background-color: white;
+    position: relative;
+    z-index: 200; }
+    .project__content h4 {
+      margin-bottom: 2rem; }
+    .project__content p:not(:last-child) {
+      margin-bottom: 1.5rem; }
+    .project__content ul {
+      list-style: none; }
+    .project__content a {
+      color: #dd9230; }
+    .project__content--link {
+      text-align: right;
+      margin-top: 1.5rem; }
+  .project__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #303030;
+    border-bottom: 1px solid #6d6d6d; }
+  .project__btn {
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid #6d6d6d;
+    cursor: pointer; }
+    .project__btn img {
+      width: 80%;
+      margin: 0 auto; }
+  .project__link {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%); }
+    .project__link--btn {
+      background-color: #ff4545;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      transition: transform .3s ease-out; }
+      .project__link--btn:hover {
+        transform: scale(1.1); }
+  .project__desktop {
+    width: 85%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .project__desktop--monitor {
+      width: 100%;
+      position: relative; }
+      .project__desktop--monitor img {
+        width: 100%; }
+    .project__desktop--screen {
+      position: absolute;
+      top: 4%;
+      left: 4%;
+      background-color: black;
+      width: 93%;
+      height: 60%;
+      overflow-y: scroll; }
+      .project__desktop--screen::-webkit-scrollbar {
+        width: .2rem; }
+      .project__desktop--screen::-webkit-scrollbar-track {
+        background-color: #eeeeee; }
+      .project__desktop--screen::-webkit-scrollbar-thumb {
+        background: #ff4545; }
+      .project__desktop--screen-in img {
+        width: 100%; }
+  .project__tablet {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .project__tablet--monitor {
+      width: 100%;
+      position: relative; }
+      .project__tablet--monitor img {
+        width: 100%; }
+    .project__tablet--screen {
+      position: absolute;
+      top: 9.5%;
+      left: 7.5%;
+      background-color: black;
+      width: 85%;
+      height: 78%;
+      overflow-y: scroll; }
+      .project__tablet--screen::-webkit-scrollbar {
+        width: .2rem; }
+      .project__tablet--screen::-webkit-scrollbar-track {
+        background-color: #eeeeee; }
+      .project__tablet--screen::-webkit-scrollbar-thumb {
+        background: #ff4545; }
+      .project__tablet--screen-in img {
+        width: 100%; }
+  .project__phone {
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .project__phone--monitor {
+      width: 100%;
+      position: relative; }
+      .project__phone--monitor img {
+        width: 100%; }
+    .project__phone--screen {
+      position: absolute;
+      top: 11%;
+      left: 11%;
+      background-color: black;
+      width: 78%;
+      height: 71%;
+      overflow-y: scroll; }
+      .project__phone--screen::-webkit-scrollbar {
+        width: .2rem; }
+      .project__phone--screen::-webkit-scrollbar-track {
+        background-color: #eeeeee; }
+      .project__phone--screen::-webkit-scrollbar-thumb {
+        background: #ff4545; }
+      .project__phone--screen-in img {
+        width: 100%; }
+  .project__wedding {
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+    background-image: url(../img/wedding_website.jpg);
+    background-size: cover;
+    background-position: center; }
+
+.mediaHidden {
+  visibility: hidden; }
 
 .contact {
   padding: 15rem 0;
@@ -588,24 +765,18 @@ body {
     height: 70rem; }
   .contact__number {
     top: 5rem; }
+  .contact__title {
+    top: 4rem;
+    right: 0; }
   .contact__content {
     width: 60%;
-    position: absolute;
     bottom: -20rem;
-    left: 40%;
-    background-color: white;
-    padding: 5rem;
-    z-index: 100; }
+    left: 40%; }
   .contact__photo {
-    width: 50%;
-    height: 50rem;
-    position: relative;
-    background-image: url(../img/post.jpg);
-    background-size: cover;
-    background-position: center;
-    float: left;
-    z-index: 20;
-    transition: all .5s ease-out; }
+    background-image: url(../img/post.jpg); }
+  .contact__frame--2 {
+    top: 3.5rem;
+    right: -4rem; }
 
 #submit {
   background-color: #ff4545;
@@ -622,3 +793,10 @@ input[type=text], select, textarea {
   margin-top: 1rem;
   margin-bottom: 1.6rem;
   resize: vertical; }
+
+.footer {
+  height: 4rem;
+  padding: 1rem;
+  background-color: #212121;
+  text-align: center;
+  color: white; }

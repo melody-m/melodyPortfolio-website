@@ -4,32 +4,27 @@
     &__container{
         height: 70rem;
     }
-
     &__number{
         top: 5rem;
     }
-
+    &__title{
+        top: 4rem;
+        right: 0;
+    }
     &__content{
-        width: 60%;
-        position: absolute;
+        width: 60%;  
         bottom: -20rem;
-        left: 40%;      
-        background-color:white;     
-        padding: 5rem;
-        z-index: 100;
+        left: 40%;    
     }
-
     &__photo{
-        width: 50%;
-        height: 50rem;
-        position: relative;
         background-image: url(../img/post.jpg);
-        @include bgCenter;
-        float: left;    
-        z-index:20;  
-        transition: all .5s ease-out;
     }
-
+    &__frame{
+        &--2{
+            top: 3.5rem;
+            right: -4rem;
+        }
+    }
 }
 
 #submit{
