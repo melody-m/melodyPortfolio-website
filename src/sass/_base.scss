@@ -25,9 +25,6 @@ html {
 		font-size: 45%;
     }
 
-    @include respond(big-desktop) {
-		font-size: 75%; //1rem = 12px, 12/16 
-	}
 }
 
 body {
@@ -41,15 +38,25 @@ body {
 }
 
 .container{
-	width: 120rem;
+	width: $container-width;
 	margin: 0 auto;
-	position: relative;
+    position: relative;
+    @include respond(big-tab){
+        width: 100rem;
+    }
+    
+    @include respond(small-tab){
+        width: 100%
+    }
 }
 .number{
 	&__box{
 	position: absolute;
 	left: 8.5rem;
-	z-index: 50;
+    z-index: 50;
+        @include respond(small-tab){
+            left: 7.5rem;
+        }
 	}
 	&__container{
 		position: relative;
@@ -62,7 +69,11 @@ body {
 		left: 0;
 		z-index:50;
 		&--gold{background-color: $color-three;}
-		&--pink{background-color: $color-two;}
+        &--pink{background-color: $color-two;}
+        @include respond(phone){
+            width: 4rem;
+            top: 10rem;
+        }
 	}
 }
 
@@ -73,56 +84,4 @@ body {
 	width: 100%;
 	margin: 0 auto;
 
-}
-
-.box{
-    position: relative;     
-
-    &__presentation{
-        position: relative;
-        padding-left: 10%;              
-    }
-
-    &__title{
-        position: absolute;
-        z-index: 200;
-        color: $color-two;
-        transition: all .5s ease-out;
-    }
-
-    &__photo{
-        width: 50%;
-        height: 50rem;
-        position: relative;
-        @include bgCenter;
-        background-color: $color-three;
-        float: left;    
-        z-index:20;  
-        transition: all .5s ease-out;
-    }
-    &__frame{
-        &--1{
-            width: 52.5rem;
-            height: 50rem;
-            position: absolute;
-            top: 3.9rem;
-            left: 7.6rem;
-            border: 1px solid $color-two;
-            z-index:0;
-        }
-        &--2{
-			width: 50%;
-            height: 33.5rem;
-            position: absolute;
-            border: 1px solid $color-two;
-            z-index:0;
-        }
-    }
-    &__content{
-        width: 50%;
-        position: absolute;      
-        background-color:white;     
-        padding: 5rem;
-        z-index: 100;
-    }
 }

@@ -1,28 +1,117 @@
 .contact{
     padding: 15rem 0;
     background-image: linear-gradient(to right, white 50%, $color-grey 50%);
+
+    @include respond(phone){
+        padding: 4rem 0;
+        padding-top: 10rem;
+    }
+
     &__container{
         height: 70rem;
+        @include respond(phone){
+            height: 90rem;
+        }
+    }
+
+    &__presentation{
+        position: relative;
+        padding-left: 10%;  
+        @include respond(small-tab){
+            padding-left: 15%;
+        }
+
+        @include respond(phone){
+            padding: 10%;
+            height: 100%;
+        }
+    }
+
+    &__left{
+        @include left;
+        @include respond(small-tab){
+            width: 45%;
+        }
+        @include respond(phone){
+            position: absolute;
+            width: 50%;
+            height: 55rem;
+        }
+    }
+    &__right{
+        @include right;
+
+        @include respond(small-tab){
+            width: 55%;
+        }
+        @include respond(phone){
+            width: 100%;
+        }
+    }
+
+    &__title{
+        @include title;
     }
     &__number{
-        top: 5rem;
+        top: 4.5rem;
+        left: -3rem;
+
+        @include respond(phone){
+            top: -9rem;
+            left: -2.5rem;
+        }
     }
-    &__title{
-        top: 4rem;
-        right: 0;
-    }
+
     &__content{
-        width: 60%;  
+        @include content;
         bottom: -20rem;
-        left: 40%;    
+        left: -30%;   
+        @include respond(small-tab){
+            bottom: -26rem;
+            left: -20%;
+        }
+        @include respond(phone){
+            top: 0;
+            left: 0;
+        }
     }
     &__photo{
+        @include photo;
         background-image: url(../img/post.jpg);
+
+        @include respond(phone){
+            background-image: none;
+        }
     }
     &__frame{
+        &--1{
+            @include frame1;
+
+            @include respond(phone){
+                height: 42rem;
+                top: 67%;
+            }
+        }
         &--2{
-            top: 3.5rem;
-            right: -4rem;
+            @include frame2;
+            top: 8%;
+            @include respond(big-tab){
+                top: 0;                
+            }
+        
+            @include respond(small-tab){                
+                right: 4rem;
+            }
+            @include respond(phone){
+                top: -12%;
+                right: -5%;
+            }
+        }
+    }
+    &__btn{
+        @include respond(phone){
+            text-align: center;
+            margin-top: 3rem;
         }
     }
 }

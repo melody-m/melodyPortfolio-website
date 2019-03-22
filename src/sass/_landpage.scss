@@ -53,6 +53,20 @@
             padding: 2rem;
             z-index: 500;
             transition: all .6s ease-in-out;
+
+            @include respond(big-tab){
+                top: 40%;
+                left: 35%;
+            }
+            @include respond(small-tab){
+                left: 33%;
+            }
+            @include respond(phone){
+                left: 18%;
+            }
+            @include respond(small-phone){                
+                left: 12%;
+            }
         }
         &--blockG{
             width: 20rem;
@@ -65,6 +79,9 @@
             padding: 2rem;
             z-index: 400;
             transition: all .6s ease-in-out;
+            @include respond(phone){
+                left: 45%;
+            }
         }
 
         &--box{
@@ -102,6 +119,19 @@
             padding: 2rem;
             z-index: 100;    
             transition: all .3s ease-in-out;        
+            @include respond(big-tab){
+                top: 40%;
+                left: 33%;
+            }
+            @include respond(small-tab){
+                left: 30%;
+            }
+            @include respond(phone){
+                left: 12%;
+            }
+            @include respond(small-phone){                
+                left: 5%;
+            }
         }
    }
     &__enter{
@@ -114,12 +144,13 @@
 
         &--btn{
             color: white;
-            border: 1px solid white;
+            border:none;
             background-color: $color-two;
             padding: 1rem 2rem;
             cursor: pointer;
             box-shadow: 1px 1px 20px black;
             transition: all .3s ease-out;
+            outline: none;
 
             &:hover{
                 transform: translateY(-.5rem) scale(1.05);

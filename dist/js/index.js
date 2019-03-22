@@ -95,47 +95,153 @@ const windowDOM = {
     })
   })
   
+//////////////////////////////////////////////////////////////////////////////
 
-  const web = document.getElementById('web-1');
 
-  web.addEventListener('click', () => {
-    document.querySelector('.project').style.height = "100vh";
 
-    setTimeout(() => {
-      
-      document.querySelector('.project__column--left').classList.replace('slideOutLeft','slideIn');
-      document.querySelector('.project__column--right').classList.replace('slideOutRight','slideIn');
-    }, 200)
-  })
+const galleryBtn = document.querySelectorAll('.gallery__link');
+const galleryBtnArr = Array.from(galleryBtn);
+const projectCont = document.querySelectorAll('.project__container');
+const projectContArr = Array.from(projectCont);
+const projectCloseBtn = document.querySelectorAll('.project__close');
+const projectCloseArr = Array.from(projectCloseBtn);
+const projectObj = [];
+const projectMap = new Map();
+const projectDisplay = [];
 
-  //////////////////////////////
-  //MEDIA CHANGE
+class Project{
+  constructor(id){
+    this.container = document.getElementById(id);
+    this.closeBtn = document.querySelector('.project__close');
+    this.leftSide = this.container.querySelector('.project__column--left');
+    this.rightSide = this.container.querySelector('.project__column--right');
+    this.mediaBtn = this.container.querySelectorAll('.project__btn');
+    this.mediaDesktop =  this.container.querySelector('.project__btn--desktop');
+    this.mediaCont =  this.container.querySelectorAll('.project__device');
+    this.mediaBtnArr = Array.from(this.mediaBtn);
+    this.mediaContArr = Array.from(this.mediaCont);
+    this.media = new Map();
+  }
+
+  displayContainer(){
+
+    document.querySelector('body').style.overflow = "hidden";
+
+    document.querySelector('.project').style.height = "100%";
   
-  const mediaBtn =  document.querySelectorAll('.project__btn');
-  const mediaBtnArr = Array.from(mediaBtn);
-  const mediaCont =  document.querySelectorAll('.project__device');
+    this.container.classList.remove('projectHidden');
+      
+    setTimeout(() =>{
+      this.leftSide.classList.replace('slideOutLeft','slideIn');
+      this.rightSide.classList.replace('slideOutRight','slideIn');
+    }, 300);
+  
+  }
 
-  const media = new Map();
+  setUpMedia(){    
+  
+    for (let i=0; i < this.mediaBtnArr.length; i++){
+      this.media.set(this.mediaBtnArr[i], this.mediaContArr[i]);
+    }
+  }
+
+  hideMedia(){
+    this.mediaContArr.forEach((cur) =>{
+      cur.classList.add('mediaHidden');
+    })
+  }
+
+  resetMediaIcons(){
+    const icons = this.container.querySelectorAll('svg');
+    const iconsArr = Array.from(icons);
+    iconsArr.forEach((cur)=>{ 
+      cur.style.fill = "#FFFFFF";
+    })
+
+  }
+  displayMedia(){
+
+    this.mediaBtnArr.forEach((cur) => {
+    cur.addEventListener('click', () => {
+
+      this.resetMediaIcons();
+
+      const iconSelect = cur.querySelector('.device-icon');
+      iconSelect.style.fill = "#ff4545";
+
+      this.hideMedia();
+
+      const selector = this.media.get(cur);
+      selector.classList.remove('mediaHidden');
+      })
+    })  
+  }
+
+  setDesktopDevice(){
+    const selector = this.media.get( this.mediaDesktop);
+    selector.classList.remove('mediaHidden');
+    this.resetMediaIcons();
+
+    const icon = this.mediaDesktop.querySelector('.device-icon');
+    icon.style.fill = "#ff4545";
+  }
 
 
-function mediaMatch(){   
-  for (let i=0; i < mediaBtnArr.length; i++){
-    media.set(mediaBtnArr[i], mediaCont[i]);
+  closeContainer(){
+    this.leftSide.classList.replace('slideIn','slideOutLeft');
+    this.rightSide.classList.replace('slideIn','slideOutRight');
+
+    setTimeout(() =>{
+      document.querySelector('.project').style.height = "0";  
+      document.querySelector('body').style.overflow = "visible";         
+    }, 300);
+
+    setTimeout(() =>{     
+      this.container.classList.add('projectHidden'); 
+      this.hideMedia();
+      this.setDesktopDevice();   
+    }, 800);
+
   }
 }
 
-mediaMatch();
-
-function changeMedia(media) {
-  mediaCont.forEach((cur) =>{
-    cur.classList.add('mediaHidden');
+function projectSetUp(){
+  projectContArr.forEach((cur) => {
+    const id = cur.id;
+    const projectView = new Project(id);
+    projectObj.push(projectView);    
   })
-  media.classList.remove('mediaHidden');
+
+  for (let i=0; i < galleryBtnArr.length; i++){
+    projectMap.set(galleryBtnArr[i], projectObj[i])
+  }
 }
 
-mediaBtnArr.forEach((cur) => {
-  cur.addEventListener('click', () => {
-    const selector = media.get(cur);
-    changeMedia(selector);
+function setEventListeners(){
+  projectSetUp();
+
+  galleryBtnArr.forEach((cur) =>{
+    cur.addEventListener('click', () => {
+      const projCont = projectMap.get(cur);
+      projectDisplay.push(projCont);
+
+      projCont.displayContainer();
+      projCont.setUpMedia();
+      projCont.displayMedia();
+    })
   })
-})
+
+  projectCloseArr.forEach((cur) =>{
+    cur.addEventListener('click', () => {
+    projectDisplay[0].closeContainer();
+    projectDisplay.pop();
+    })
+  })
+}
+
+
+function init() {
+  setEventListeners();
+}
+
+init();

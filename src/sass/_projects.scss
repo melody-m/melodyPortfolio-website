@@ -3,108 +3,242 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    background-color: $color-grey-dark-1;
+    height: 0;
     z-index: 1000;
-    overflow: scroll;
+    overflow: hidden;
+    opacity: 1;
     transition: all .5s ease-out;
 
+    &__container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 5rem; 
+        @include bgCenter;
+
+        @include respond(big-tab){
+            min-height: 100%;
+            overflow-y: scroll;
+        }  
+        @include respond(phone){
+            padding: 0;       
+        }
+
+        
+    }
+    &__header{
+        width: 70%;
+        height: 70%;
+        position: absolute;
+        top: 8rem;
+        left:6rem;
+        &--pos{
+            position: relative;
+        }
+    }
+
     &__title{
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        padding-left: 1rem;
-        color:$color-two;
+        position: absolute;
+        top:-2rem;
+        left: 50%;
+        width: 70%;
+        transform: translateX(-50%);
+        background-color: $color-two;
+        text-align: center;
+        padding: 1rem 1.5rem;
+        z-index: 500;
+
+        @include respond(small-tab){
+            top:-4rem;
+        }  
+        @include respond(phone){
+            top:-5rem;
+        }
+        
+
+
+        & h3{
+            font-size: 3.5rem;
+            font-weight: 300;
+            line-height: 4rem;          
+            color:white;
+        }
+    }
+    &__close{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: transparent;
+        border: none;
+        color: $color-grey-dark-2;
+        font-size :4rem;
+        outline: none;
+        cursor: pointer;
+        z-index: 500;
+
     }
     &__column{
         width: 50%;
         height: 100%;
         float: left;        
-        padding: 4rem;
         position: relative;
         transition: all .5s ease-out;
 
+        @include respond(big-tab){
+            width: 100%;    
+            height: auto;         
+        }   
+
         &--left{
             background-color: $color-grey;
-        }
-        &--right{
-            background-color: $color-grey-dark-1;
-            padding-left: 5rem;           
-        }      
-    }
-    &__frame{
-        &--1{
-            width: 70%;
-            height: 70%;
-            position: absolute;
-            top: 8rem;
-            left:5rem;
-            border: 1px solid $color-two;
-        }
-        &--2{
-            width: 30%;
-            height: 30%;
-            position: absolute;
-            bottom: 5rem;
-            right:6rem;
-            border: 1px solid $color-three;
-        }
-    }
-
-    &__content{
-        width: 85%;
-        margin: 0 auto;
-        padding: 4rem;
-        text-align: justify;
-        background-color: white;
-        position: relative;
-        z-index: 200;
-
-        & h4{
-            margin-bottom: 2rem;
-        }  
-        & p{
-            &:not(:last-child){
-                margin-bottom: 1.5rem;
+            padding: 4rem;
+            @include respond(small-tab){
+                padding: 1rem;
+            }  
+            @include respond(phone){
+                padding: 3rem 1rem;
             }
         }
-        & ul{
-            list-style: none;
+        &--right{
+            background-color: $color-grey-dark-1;       
+
+        }      
+    }
+
+    &__body{
+        width: 85%;
+        margin: 6rem auto;
+        position: relative;
+
+        &--content{
+            padding: 6rem;
+            text-align: justify;
+            background-color: white;
+            position: relative;
+            z-index: 200;
+
+            & h4{
+                margin-bottom: 2rem;
+            }  
+            & p{
+                &:not(:last-child){
+                    margin-bottom: 1.5rem;
+                }
+            }
+            & ul{
+                list-style: none;
+                margin-bottom: 1.5rem;
+            }
+            & a {
+                color: $color-three;
+            }
+            &-link{
+                text-align: right;
+                margin-top: 1.5rem;
+            }
         }
-        & a {
-            color: $color-three;
+        &--frame{
+            &-1{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: -4%;
+                left:-4%;
+                border: 1px solid $color-two;            
+            }
+            &-2{
+                width: 30%;
+                height: 30%;
+                position: absolute;
+                bottom: -5%;
+                right:-5%;
+                border: 1px solid $color-three;
+            }
         }
-        &--link{
-            text-align: right;
-            margin-top: 1.5rem;
+        &--dash{
+            width: 5rem;
+            height: 3px;
+            position: absolute;
+            background-color: $color-two;
+            z-index: 300;
+            &:first-child{
+                top: 8rem;
+                left: -1.5rem;
+            }
+            &:last-child{
+                bottom: 2rem;
+                right:-2rem;
+            }
+
         }
     }
 
+    &__exp{
+        width: 80%;
+        margin: 2rem auto;       
+        text-align: center;
+        color: white;
+        & p{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &--icon{
+            display: inline-block;
+            vertical-align: middle;
+            width: 7rem;
+            height: 7rem;
+            margin: 0 auto;
+            & img{
+                width: 100%;
+            }
+        }
+    }
+    &__display{
+        position: relative;
+        height: 60rem;
+        @include respond(big-tab){
+            height: 50rem;     
+        } 
+    }
+
+
     &__media{
-        position: absolute;
-        top: 0;
-        left: 0;       
+        width: 16rem;
+        height: 5rem;
         background-color: $color-grey-dark-2;
         border-bottom: 1px solid $color-grey-medium-2;
+        border-right: 1px solid $color-grey-medium-2;
     }
     &__btn{
         width: 5rem;
         height: 5rem;
         background-color: transparent;
-        border:none;
-        border-right: 1px solid $color-grey-medium-2;
-        
+        border:none;        
+        outline: none;
         cursor: pointer;
-        & img{
-            width: 80%;
-            margin: 0 auto;
+
+        & svg{
+            width: 100%;
+            height: 100%;
+        }
+
+        &:not(:last-child){
+            border-right: 1px solid $color-grey-medium-2;
         }
     }
 
     &__link{
-        position: absolute;
-        bottom: 5rem;
-        left: 50%;
-        transform: translateX(-50%);
+        text-align: center;
+        margin: 2rem;
+        animation-name: scaleUp;
+        animation-duration: 4s;       
+        animation-iteration-count: infinite;
+        @include respond(mobile){  
+            animation: none;     
+        }  
+
         &--btn{
             background-color: $color-two;
             color: white;
@@ -120,11 +254,20 @@
     }
 
     &__desktop{
-        width: 85%;
+        width: 75%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @include respond(big-tab){
+            width: 55%;      
+        }  
+        @include respond(small-tab){
+            width: 65%;      
+        }  
+        @include respond(phone){
+            width: 80%;      
+        }  
         &--monitor{
             width: 100%;
             position: relative;
@@ -163,6 +306,16 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @include respond(big-tab){
+            width: 30%;     
+        }  
+        @include respond(small-tab){
+            width: 40%;      
+        }
+        @include respond(phone){
+            width: 60%;      
+        }
+
         &--monitor{
             width: 100%;
             position: relative;
@@ -202,8 +355,20 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @include respond(big-tab){
+            width: 25%;           
+        }  
+        @include respond(small-tab){
+            width: 30%;      
+        }
+        @include respond(phone){
+            width: 50%;      
+        }
+
         &--monitor{
-            width: 100%;
+            width: 90%;
+            margin: 0 auto;
             position: relative;
             & img{
                 width: 100%; 
@@ -234,18 +399,27 @@
             }
         }
     }
-    &__wedding{
-        width: 100%;
-        height: 100%;
-        padding: 5rem;
-        // background-image: linear-gradient(
-        //         to bottom,
-        //         rgba($color-two, 1), 
-        //         rgba($color-two, .8)),
-        //         url(../img/wedding_website.jpg);
-        background-image: url(../img/wedding_website.jpg);
-        @include bgCenter;
 
+    &__wedding{
+        background-image: url(../img/wedding_website.jpg);
+        @include respond(phone){
+            background-image:none;   
+            background-color: $color-grey-dark-1;     
+        } 
+    }
+    &__california{
+        background-image: url(../img/california_website.jpg);       
+        @include respond(phone){
+            background-image:none;   
+            background-color: $color-grey-dark-1;           
+        } 
+    }
+    &__craft{
+        background-image: url(../img/craft_website.jpg);        
+        @include respond(phone){
+            background-image:none;     
+            background-color: $color-grey-dark-1;         
+        }
     }
 }
 
@@ -254,3 +428,16 @@
 .mediaHidden{
     visibility: hidden;
 }
+
+.projectHidden{
+    pointer-events: none;
+    opacity: 0;
+}
+
+
+@keyframes scaleUp {
+    0%   {transform: scale(1);}   
+    33%  {transform: scale(1.1);}
+    66%  {transform: scale(1);}
+    100% {transform: scale(1);}
+  }

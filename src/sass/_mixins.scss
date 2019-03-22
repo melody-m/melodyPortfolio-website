@@ -10,9 +10,72 @@
     background-position: center;
 }
 
+@mixin left{
+    width: 50%;
+    height: 50rem;
+    position: relative;
+    float: left;
+}
+@mixin right{
+    width: 50%;
+    height: 50rem;
+    position: relative;
+    float: left;
+}
+
+@mixin title{
+    position: absolute;
+    z-index: 200;
+    color: $color-two;
+    top: -6rem;
+    right: 0;
+    transition: all .5s ease-out;
+}
+
+@mixin photo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include bgCenter;
+    float: left;    
+    z-index:20;  
+    transition: all .5s ease-out;
+}
+
+@mixin content{
+    width: 100%;
+    position: absolute;      
+    background-color:white;     
+    padding: 5rem;
+    z-index: 100;
+}
+
+@mixin frame1{
+    width: 90%;
+    height: 50rem;
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    border: 1px solid $color-two;
+    z-index:0;
+}
+
+@mixin frame2{
+    width: 100%;
+    height: 33.5rem;
+    position: absolute;
+    right: 20%;
+    border: 1px solid $color-two;
+    z-index:0;
+}
+
 //MIXINS MEDIA QUERIES
 
 @mixin  respond($breakpoint) {
+    @if $breakpoint == small-phone {
+        @media (max-width: 23.12em) {@content};   //370px
+    }
+
     @if $breakpoint == phone {
         @media (max-width: 37.5em) {@content};   //600px
     }
