@@ -106,7 +106,7 @@
         height: 100%;
 
         &--text{
-            width: 70%;
+            width: 50%;
             position: absolute;
             left:4rem;
             bottom:0;
@@ -115,6 +115,9 @@
             padding-bottom: 4rem;
             color: white;
             transition: all .3s ease-out;
+            @include respond(big-tab){
+                width: 70%;
+            }
 
             @include respond(phone){
                 padding: 1rem;

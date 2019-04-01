@@ -24,9 +24,11 @@
         }  
         @include respond(phone){
             padding: 0;       
-        }
-
-        
+        }        
+    }
+    &__content{
+        position: relative;
+        width: 100%;
     }
     &__header{
         width: 70%;
@@ -41,35 +43,29 @@
 
     &__title{
         position: absolute;
-        top:-2rem;
+        top:2rem;
         left: 50%;
-        width: 70%;
+        display: inline-block;
+        min-width: 60%;
         transform: translateX(-50%);
         background-color: $color-two;
         text-align: center;
         padding: 1rem 1.5rem;
-        z-index: 500;
-
-        @include respond(small-tab){
-            top:-4rem;
-        }  
-        @include respond(phone){
-            top:-5rem;
-        }
+        z-index: 500;   
         
+        @include respond(laptop){
+            top:2.5rem;
+            padding: .6rem 1.2rem;
+        } 
 
-
-        & h3{
-            font-size: 3.5rem;
-            font-weight: 300;
-            line-height: 4rem;          
-            color:white;
-        }
+        @include respond(phone){
+            min-width: 70%;
+        }  
     }
     &__close{
         position: absolute;
         top: 1rem;
-        right: 1rem;
+        right: 2rem;
         background-color: transparent;
         border: none;
         color: $color-grey-dark-2;
@@ -77,6 +73,11 @@
         outline: none;
         cursor: pointer;
         z-index: 500;
+        transition: all .3s ease-in-out;
+        @include respond(phone){
+            position: fixed;
+            color: $color-two;
+        }
 
     }
     &__column{
@@ -85,6 +86,10 @@
         float: left;        
         position: relative;
         transition: all .5s ease-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
 
         @include respond(big-tab){
             width: 100%;    
@@ -102,10 +107,16 @@
             }
         }
         &--right{
-            background-color: $color-grey-dark-1;       
+            background-color: $color-grey-dark-1;    
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center; 
+            overflow: hidden;  
 
         }      
     }
+
 
     &__body{
         width: 85%;
@@ -118,6 +129,14 @@
             background-color: white;
             position: relative;
             z-index: 200;
+
+            @include respond(laptop){
+                padding: 3rem;
+                padding-top: 5rem;
+            }
+            @include respond(mid-desktop){
+                padding: 8rem;          
+            }
 
             & h4{
                 margin-bottom: 2rem;
@@ -197,14 +216,18 @@
     }
     &__display{
         position: relative;
-        height: 60rem;
+        width: 100%;
+        height: 45rem;
         @include respond(big-tab){
             height: 50rem;     
         } 
+        @include respond(big-desktop){
+            height: 60rem;     
+        } 
     }
 
-
     &__media{
+        align-self: flex-start;
         width: 16rem;
         height: 5rem;
         background-color: $color-grey-dark-2;
@@ -228,23 +251,20 @@
             border-right: 1px solid $color-grey-medium-2;
         }
     }
-
-    &__link{
+    &__extra{
+        display: inline-block;
         text-align: center;
-        margin: 2rem;
-        animation-name: scaleUp;
-        animation-duration: 4s;       
-        animation-iteration-count: infinite;
-        @include respond(mobile){  
-            animation: none;     
-        }  
+        padding: 3rem;
+
+        @include respond(small-phone){
+            padding: 1.5rem;         
+        }
 
         &--btn{
-            background-color: $color-two;
-            color: white;
-            border: none;
+            @include btn;
+            background-color: rgba($color-grey-medium, .5);
             padding: 1rem 2rem;
-            cursor: pointer;
+            color: white;
             transition: transform .3s ease-out;
 
             &:hover{
@@ -253,14 +273,42 @@
         }
     }
 
+    &__link{
+        display: inline-block;
+        text-align: center;
+        padding: 3rem;
+
+        @include respond(small-phone){
+            padding: 1.5rem;         
+        }
+
+        &--btn{
+            cursor: pointer;
+            background-color: $color-two;
+            color: white;            
+            padding: 1rem 2rem;            
+            transition: transform .3s ease-out;
+
+            & a{
+                text-decoration: none;
+                color: white;
+            }
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+
     &__desktop{
-        width: 75%;
+        width: 65%;
+
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         @include respond(big-tab){
-            width: 55%;      
+            width: 50%;      
         }  
         @include respond(small-tab){
             width: 65%;      
@@ -268,6 +316,9 @@
         @include respond(phone){
             width: 80%;      
         }  
+        @include respond(big-desktop){
+            width: 70%;    
+        } 
         &--monitor{
             width: 100%;
             position: relative;
@@ -301,13 +352,13 @@
         }
     }
     &__tablet{
-        width: 50%;
+        width: 35%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         @include respond(big-tab){
-            width: 30%;     
+            width: 25%;     
         }  
         @include respond(small-tab){
             width: 40%;      
@@ -315,6 +366,9 @@
         @include respond(phone){
             width: 60%;      
         }
+        @include respond(big-desktop){
+            width: 45%;    
+        } 
 
         &--monitor{
             width: 100%;
@@ -350,14 +404,14 @@
     }
 
     &__phone{
-        width: 40%;
+        width: 30%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
 
         @include respond(big-tab){
-            width: 25%;           
+            width: 20%;           
         }  
         @include respond(small-tab){
             width: 30%;      
@@ -365,6 +419,9 @@
         @include respond(phone){
             width: 50%;      
         }
+        @include respond(big-desktop){
+            width: 40%;    
+        } 
 
         &--monitor{
             width: 90%;
@@ -421,8 +478,170 @@
             background-color: $color-grey-dark-1;         
         }
     }
+    &__dots{
+        background-image: linear-gradient(to bottom, rgba(white, .8),#424250 );
+        background-color: #424250;
+    }
 }
 
+
+.slider{
+    &__research{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-grey-dark-2;    
+        padding: 4rem;
+        transition: all .5s ease-out;
+    }
+    &__resCol{
+        float: left;
+        &--1{            
+            width: 40%;
+            height: 90%;
+            overflow: hidden;
+            @include bgContain;
+
+            @include respond(phone){
+                width: 50%;   
+            }
+
+            & img{
+                width: 100%;
+            }
+
+            &-wed{background-image: url("../img/projects/wedding_siteDraft.jpg");}
+            &-cal{background-image: url("../img/projects/california_siteDraft.jpg");}
+            &-bee{background-image: url("../img/projects/busybee_siteDraft.jpg");}
+            &-dots{background-image: url("../img/projects/dots_siteDraft.jpg");}
+        }
+        &--2{            
+            width: 60%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;  
+
+            @include respond(phone){
+                width: 50%;   
+            }
+        }
+    }
+    &__typo{
+        width: 90%;
+        height: 30%;
+        margin: 0 auto;
+        text-align: center;
+        @include bgContain;
+
+        &--1{background-image: url("../img/projects/wedding_typo.jpg");
+            @include respond(phone){
+                background-image: url("../img/projects/wedding_typo-small.jpg")
+            }
+        }
+        &--2{background-image: url("../img/projects/california_research.jpg");
+            @include respond(phone){
+                background-image: url("../img/projects/california_research-small.jpg")
+            }
+        }
+        &--3{background-image: url("../img/projects/busybee_research.jpg");
+            @include respond(phone){
+                background-image: url("../img/projects/busybee_research-small.jpg")
+            }
+        }
+        &--4{background-image: url("../img/projects/dots_research.jpg");
+            @include respond(phone){
+                background-image: url("../img/projects/dots_research-small.jpg")
+            }
+        }
+    }
+    &__palette{
+        text-align: center;
+        &--square{
+            display: inline-block;            
+            width: 4rem;
+            height: 4rem;
+            &-1{background-color: #294a8b;}
+            &-2{background-color: #5e82c8;}
+            &-3{background-color: #9ebfff;}
+            &-4{background-color: #ffa076;}
+            &-5{background-color: #ffcfba;}
+
+            &-6{background-color: #074684;}
+            &-7{background-color: #1e98ee;}
+            &-8{background-color: #b3e0ff;}
+            &-9{background-color: #cccccc;}
+            &-10{background-color: #999999;}
+
+            
+            &-11{background-color: #ffcc99;}
+            &-12{background-color: #ffcccc;}
+            &-13{background-color: #ffff99;}
+            &-14{background-color: #99ff99;}
+            &-15{background-color: #bfe5ff;}
+
+            &-16{background-color: #fb8c00;}
+            &-17{background-color: #42a5f5;}
+            &-18{background-color: #ffd54f;}
+            &-19{background-color: #424250;}
+        }
+    }
+    &__draft{
+        width: 90%;
+        height: 30%;
+        text-align: center; 
+        @include bgContain;
+        
+        &--2{background-image: url("../img/projects/california_sliderDraft.jpg");
+            @include respond(phone){
+                background-image: url("../img/projects/california_sliderDraft-small.jpg")
+            }
+        }
+        &--3{background-image: url("../img/projects/busybee_mediaLayout.jpg");
+            @include respond(phone){
+                background-image: url("../img/projects/busybee_mediaLayout-small.jpg")
+            }
+        }
+        &--4{background-image: url("../img/projects/dots_anim.jpg");
+            @include respond(phone){
+                background-image: url("../img/projects/dots_anim-small.jpg")
+            }
+        }
+    }
+    &__invite{
+        width: 45%;
+        height: 45%;
+        display: inline-block;
+        @include bgContain;
+        
+            &--1{background-image: url("../img/projects/wedding_invite01.jpg");
+                background-position: right;}
+            &--2{background-image: url("../img/projects/wedding_invite02.jpg");
+                background-position: left;}
+            &--3{background-image: url("../img/projects/wedding_invite03.jpg");
+                background-position: right;}
+            &--4{background-image: url("../img/projects/wedding_invite04.jpg");
+                background-position: left;}
+    }
+    &__arrow{
+        float: left;
+        width: 100%;
+        margin-top: 3rem; 
+        text-align: center;
+        &--btn{            
+            @include btn;
+            width: 4rem;
+            height: 4rem;
+            & img{ 
+                width: 100%;
+            }
+        }
+    }
+
+}
 
 
 .mediaHidden{
@@ -434,10 +653,6 @@
     opacity: 0;
 }
 
-
-@keyframes scaleUp {
-    0%   {transform: scale(1);}   
-    33%  {transform: scale(1.1);}
-    66%  {transform: scale(1);}
-    100% {transform: scale(1);}
-  }
+.researchSlide{
+    transform : translateY(100%);
+}

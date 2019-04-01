@@ -18,6 +18,9 @@
         @include respond(phone){
             padding: 8rem 0;
         }
+        @include respond(small-phone){
+            padding: 4rem 0;
+        }
     }
     &__presentation{
         position: relative;
@@ -79,6 +82,9 @@
     &__photo{
         @include photo;
         background-image: url(../img/about.jpg);
+        @include respond(phone){
+            background-image: url(../img/about-small.jpg);
+        }
 
         @include respond(small-phone){
             background-image: none;
@@ -87,6 +93,7 @@
     &__frame{
         &--1{
             @include frame1;
+            transition: all .5s ease-out;
             @include respond(phone){
                 height: 42rem;
                 top: 30%;
@@ -99,6 +106,7 @@
         &--2{
             @include frame2;
             top: 10%;
+            transition: all .5s ease-out;
             @include respond(big-tab){
                 top: 0;
             }
@@ -180,9 +188,14 @@
             height: 40rem;
         }
 
+        @include respond(phone){
+            width: 36rem;
+            height: 36rem;
+        }
+
         @include respond(small-phone){
-            width: 38rem;
-            height: 38rem;
+            width: 30rem;
+            height: 36rem;
         }
     }    
 
@@ -212,23 +225,25 @@
             width: 36rem;
             height: 36rem;
         }
+        @include respond(phone){
+            width: 32rem;
+            height: 32rem;
+        }
         @include respond(small-phone){
-            width: 34rem;
-            height: 34rem;
+            width: 26rem;
+            height: 32rem;
         }
 
 
         &--btn{
             width: 100%;
             height: 100%;
-            background-color: transparent;
-            border: none;
             cursor: pointer;
             z-index:500;
         }
 
         &--text{
-            width: 8.5rem;
+            width: 10rem;
             position: absolute;
             bottom: 0rem;
             left: 2rem;
@@ -250,7 +265,10 @@
             position: relative;   
             @include respond(small-tab){
                 padding: 3rem;                
-            }             
+            }   
+            @include respond(small-phone){
+                padding: 1rem;                
+            }           
         }
         &--title{
             margin-bottom: 2rem;
@@ -273,14 +291,12 @@
             position: absolute;
             top: -1rem;
             right: 0;
-            outline: none;
-
+            
             &-btn{
-                background-color: transparent;
-                border:none;             
+                @include btn;       
                 font-size: 3rem;
                 color: $color-three;
-                cursor: pointer;
+                
             }
         }
     }

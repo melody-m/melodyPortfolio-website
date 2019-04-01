@@ -96,10 +96,10 @@
             width: 55.2rem;
             margin: 0 auto;
             @include respond(phone){
-                width: 37.2rem;
+                width: 25.2rem;
             }
             @include respond(small-phone){
-                width: 25.2rem;
+                width: 19.2rem;
             }
         }
         &--center-small{
@@ -108,10 +108,10 @@
             margin: 0 auto;
 
             @include respond(phone){
-                width: 24.8rem;
+                width: 16.8rem;
             }
             @include respond(small-phone){
-                width: 16.8rem;
+                width: 12.8rem;
             }
         }
     }
@@ -134,11 +134,10 @@
         @include respond(phone){
             width: 8rem;
             height: 22.2rem;
-            margin: 0 2rem;
+            margin: 0;
         }
         @include respond(small-phone){
             width: 6rem;
-            margin: 0 1rem;
             height: 19.7rem;
         }
 
@@ -150,7 +149,7 @@
         
         &--line{
             width: 1px;
-            height: 5rem;            
+            height: 0rem;            
             background-color: $color-two;              
             margin: 0 auto;     
             transition: all .5s ease-out;
@@ -168,3 +167,14 @@
     }
 
 }
+
+
+.visibility{
+    opacity: 0;
+    transform: translateY(5rem);
+}
+
+.slideUp {
+    opacity: 1;
+    transition: all .8s ease-out;
+  }

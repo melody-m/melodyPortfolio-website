@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Melody's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Roboto|Roboto+Condensed:300,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto+Condensed:300,400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
         
 </head>
 
 <body>
+
+    <div class="loader load">
+
+        <div class="spinner spinner-large"></div>
+        <div class="spinner spinner-med"></div>
+        <div class="spinner spinner-small"></div>
+    </div>
 
     <section class="landpage">
         <div class="landpage__left">
@@ -42,7 +55,7 @@
 
     </section>
 
-    <section class="about hidden">
+    
 
         <div class="navigation">
                 <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
@@ -54,23 +67,24 @@
                 <nav class="navigation__nav ">
                     <ul class="navigation__list">
                         <li class="navigation__item">                           
-                            <a href="#home" class="navigation__link">01. About Me</a>
+                            <a href="#about" class="navigation__link">01. About Me</a>
                         </li>
-
                         <li class="navigation__item">                            
-                            <a href="#about" class="navigation__link">02. My Skills</a></li>
+                            <a href="#skills" class="navigation__link">02. My Skills</a></li>
                         <li class="navigation__item">                           
-                            <a href="#roadtrip" class="navigation__link">03. Projects</a>                            
+                            <a href="#work" class="navigation__link">03. Work</a>                            
                         </li>
                         <li class="navigation__item">                           
-                            <a href="#follow" class="navigation__link">04. Contact Me</a>
+                            <a href="#contact" class="navigation__link">04. Contact Me</a>
                         </li>
                     </ul>
                 </nav>
             </div>    
         </div>
 
-        <div class="about__container clearfix">
+    <section class="about hidden">
+
+        <div class="about__container clearfix" id="about">
             
             <div class="about__presentation clearfix">
                 
@@ -83,7 +97,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="about__frame--1"></div>
+                    <div class="about__frame--1 slideOutLeft"></div>
                 </div>
 
                 <div class="about__right">
@@ -99,7 +113,7 @@
                             a character or a full environment, anything is possible.</p>
                                                 
                     </div>
-                    <div class="about__frame--2"></div>
+                    <div class="about__frame--2 slideOutRight"></div>
                 </div>
             </div>
         </div>
@@ -111,12 +125,11 @@
                 <div class="window" id ="win-1">         
                     <div class="window__side window__side--front">                            
                         <div class="window__front">    
-                            <button class="window__front--btn" id ="winBtn-1">
+                            <div class="window__front--btn" id ="winBtn-1">
                             <div class="window__front--text">In a past life</div>                                
                             <div class="window__front--arrow">&rarr;</div>
-                            </button>
-                        </div>                        
-                        
+                            </div>
+                        </div>    
                     </div>
             
                     <div class="window__side window__side--back">
@@ -143,10 +156,10 @@
                 <div class="window" id ="win-2">         
                     <div class="window__side window__side--front">                            
                         <div class="window__front">                
-                            <button class="window__front--btn" id ="winBtn-2">
+                            <div class="window__front--btn" id ="winBtn-2">
                                 <div class="window__front--text">Make it happen</div>                                
                                 <div class="window__front--arrow">&rarr;</div>
-                            </button>
+                            </div>
                         </div>
                         
                         
@@ -163,7 +176,7 @@
                             broad set of organisational and creative skills as well as a habit to collaborate with a wide range of people.</p>
         
                             <p class="window__back--text">To strenghten my skills, I am now looking for an internship or a junior position, if you'd like to talk
-                             about it, please do not hesitate to contact me.</p>
+                             about it, please do not hesitate to <a href="#contact">contact me</a>.</p>
                         </div>
                         
                     </div>    
@@ -174,10 +187,10 @@
                 <div class="window" id ="win-3">         
                     <div class="window__side window__side--front">                            
                         <div class="window__front">                
-                            <button class="window__front--btn" id ="winBtn-3">
+                            <div class="window__front--btn" id ="winBtn-3">
                                 <div class="window__front--text">A few fun facts</div>                                
                                 <div class="window__front--arrow">&rarr;</div>
-                            </button>
+                            </div>
                         </div>
                         
                         
@@ -189,7 +202,7 @@
                             <div class="window__back--close"><button class="window__back--close-btn" id ="close-3">&times;</button></div>
                             <div class="window__back--title"><h4>A few fun facts</h4></div>   
                             <ul class="window__back--list">
-                                <li>&ndash; I have lived in 3 different countries</li>
+                                <li>&ndash; I have lived in 3 different countries.</li>
                                 <li>&ndash; I've held the Best Visual Effect Oscar, BAFTA and VES awards for the Jungle Book movie, 
                                     being part of the incredible team that put it together.</li>
                                 <li>&ndash; I've hidden one of the 'easter egg' Mickey Mouse on the Jungle Book movie.</li>
@@ -204,7 +217,7 @@
     </section>
     
 
-    <section class="skill clearfix hidden">
+    <section class="skill clearfix hidden" id="skills">
 
         <div class="container">
             <div class="skill__number number__box">
@@ -338,7 +351,7 @@
         
                         <div class="skill__item visibility">
                             <div class="skill__item--line"></div>
-                            <img src="img/icons/skill_id.svg" alt="Icon React skill" class="skill__img">
+                            <img src="img/icons/skill_react.svg" alt="Icon React skill" class="skill__img">
                             <div class="skill__text">React</div>
                             <div class="skill__item--line"></div>
                         </div>   
@@ -353,7 +366,7 @@
 
     </section>
 
-    <section class="work hidden">
+    <section class="work hidden" id="work">
         <div class="work__frame"></div>
         <div class="container">
             <div class="work__number number__box">
@@ -415,51 +428,46 @@
         <div class="project__container project__wedding projectHidden clearfix" id="wedding-website">
             <button class="project__close">&times;</button>
             <div class="project__column project__column--left slideOutLeft">
+
+                <div class="project__content">                
                 
-                <div class="project__header">
-                    <div class="project__header--pos clearfix">
-                        <div class="project__title">
-                            <h3>R & M's Wedding</h3>                        
-                        </div>                        
+                    <div class="project__title">
+                        <h3>R & M's Wedding</h3>                        
+                    </div>                        
+                   
+                    <div class="project__body">
+                        <div class="project__body--dash"></div>
+                        <div class="project__body--frame-1"></div>
+                        <div class="project__body--content">
+                            <h4>Description</h4>
+                            <p>Wedding websites allow couples to share a lot of information in one single place as well as manage reservations 
+                                in a much easier way than collecting rsvp cards.                      
+                            </p>  
+                            
+                            <p> The goal of this website were :</p>
+                                <ul>
+                                    <li>&ndash; to be easy to use : a simple design that doesn't confuse users,</li>                               
+                                    <li>&ndash; to be easy to maintain and add new sections when needed,</li>
+                                    <li>&ndash; responsive on all the main devices : desktop, tablets and phones,</li>
+                                    <li>&ndash; to adapt to older browsers,</li>
+                                    <li>&ndash; to respect the design choices made.</li>
+                                </ul>        
+                            
+                            <h4>Design</h4>
+                            <p>This is a simple HTML5 and CSS3 website, with few animations, but nothing too heavy to keep it mobile-friendly and responsive.
+                                We had decided on a visual identity that would be carried through the different elements of the wedding (decorations and stationnery)
+                                which gave a strong base to design the website, in particular for the colour palette and typography. 
+                            </p>
+                            <p class="project__body--content-link">
+                                <a href="">See my code on github &rarr;</a> 
+                            </p>
+                        </div>        
+                        <div class="project__body--frame-2"></div>
+                        <div class="project__body--dash"></div>
+                        
                     </div>
                 </div>
 
-                <div class="project__body">
-                    <div class="project__body--dash"></div>
-                    <div class="project__body--frame-1"></div>
-                    <div class="project__body--content">
-                        <h4>Description</h4>
-                        <p>Wedding websites are becomming particularly popular as they allow couples to share a lot of
-                            information in one single place as well as manage reservations in a much easier way than collecting rsvp cards.
-                            Although a lot of platform exists to create them, the themes to choose from are quite restrained and there's a good chance they won't
-                            match the theme and colours of the wedding.
-        
-                            It was definitely the case for us : the venue and design choices we had made wouldn't translate to a template. 
-                        </p>  
-                        <p>
-                            The goal of this website were :
-                            <ul>
-                                <li>&ndash; easy to use : a simple design that doesn't confuse the users,</li>
-                                <li>&ndash; to be informative,</li>
-                                <li>&ndash; easy to maintain and add new sections when needed,</li>
-                                <li>&ndash; responsive on all the main devices : desktop, tablets and phones,</li>
-                                <li>&ndash; to adapt to older browsers,</li>
-                                <li>&ndash; to respect the design of the invitations.</li>
-                            </ul>         
-                        </p>
-                        <h4>Design</h4>
-                        <p>We've kept the blue and peach colors of the chosen palette as well as the handwritten font of the invitations all the way through. 
-                            The website is split in clear categories to help the users navigate. There are a few animations,
-                            very discreet to avoid confusion and long loading time.
-                        </p>
-                        <p class="project__body--content-link">
-                            <a href="">See my code on github &rarr;</a> 
-                        </p>
-                    </div>        
-                    <div class="project__body--frame-2"></div>
-                    <div class="project__body--dash"></div>
-                    
-                </div>
 
                 
             </div>
@@ -513,39 +521,88 @@
                 <div class="project__display">
                     <div class="project__device project__desktop">
                         <div class="project__desktop--monitor">
-                            <img src="img/desktop.png" alt="">
+
+                            <img srcset="img/devices/desktop-small.png 350w, img/devices/desktop.png 600w"
+                            sizes="(max-width:25em) 320px"                                   
+                            src="img/devices/desktop.png" alt="Desktop monitor">
+
                             <div class="project__desktop--screen">
                                 <div class="project__desktop--screen-in">
-                                    <img src="img/wedding_website_desktop.jpg" alt="">
+                                    <img srcset="img/projects/wedding_website_desktop-small.jpg 350w, img/projects/wedding_website_desktop.jpg 600w"
+                                    sizes="(max-width:25em) 300px"                  
+                                    src="img/projects/wedding_website_desktop.jpg" alt="Desktop website">
                                 </div>
                             </div>
                         </div>                    
                     </div>
                     <div class="project__device project__tablet mediaHidden">
                         <div class="project__tablet--monitor">
-                            <img src="img/tablet.png" alt="">
+                                <img srcset="img/devices/tablet-small.png 300w, img/devices/tablet.png 450w"
+                                sizes="(max-width:25em) 240px"                                        
+                                src="img/devices/tablet.png" alt="Tablet">
                             <div class="project__tablet--screen">
                                 <div class="project__tablet--screen-in">
-                                    <img src="img/wedding_website_tablet.jpg" alt="">
+                                    <img srcset="img/projects/wedding_website_tablet-small.jpg 220w, img/projects/wedding_website_tablet.jpg 450w"
+                                    sizes="(max-width:25em) 200px" 
+                                    src="img/projects/wedding_website_tablet.jpg" alt="Tablet website">
                                 </div>
                             </div>
                         </div>                    
                     </div>
                     <div class="project__device project__phone mediaHidden">
                         <div class="project__phone--monitor">
-                            <img src="img/phone.png" alt="">
+                            <img src="img/devices/phone.png" alt="Phone">
                             <div class="project__phone--screen">
                                 <div class="project__phone--screen-in">
-                                    <img src="img/wedding_website_phone.jpg" alt="">
+                                    <img srcset="img/projects/wedding_website_phone-small.jpg 150w, img/projects/wedding_website_phone.jpg 300w"
+                                    sizes="(max-width:25em) 140px" 
+                                    src="img/projects/wedding_website_phone.jpg" alt="Phone website">
                                 </div>
                             </div>
                         </div>                    
                     </div>
                 </div>
+                <div class="project__buttons">
+                    <div class="project__extra">
+                        <button class="project__extra--btn">RESEARCH</button>
+                    </div>
+    
+                    <div class="project__link">
+                        <div class="project__link--btn"><a href="http://robertandmelody.co.uk/" target="blank">VISIT THE WEBSITE</a></div>
+                    </div>
+                </div>
 
 
-                <div class="project__link">
-                    <button class="project__link--btn">VISIT THE WEBSITE</button>
+                <div class="slider__research researchSlide">
+
+                    <div class="slider__resCol slider__resCol--1 slider__resCol--1-wed"></div>
+                    <div class="slider__resCol slider__resCol--2">
+                        
+                        <h4>Research</h4>  
+                        <div class="slider__typo slider__typo--1"></div>                      
+                        
+                        <div class="slider__palette">
+                            <h4>Colours</h4>
+                            <div class="slider__palette--square slider__palette--square-1"></div>
+                            <div class="slider__palette--square slider__palette--square-2"></div>
+                            <div class="slider__palette--square slider__palette--square-3"></div>
+                            <div class="slider__palette--square slider__palette--square-4"></div>
+                            <div class="slider__palette--square slider__palette--square-5"></div>
+                        </div>
+                        <h4>Stationnery</h4>
+                        <div class="slider__draft ">
+                            <div class="slider__invite slider__invite--1"></div>
+                            <div class="slider__invite slider__invite--2"></div>
+                            <div class="slider__invite slider__invite--3"></div>
+                            <div class="slider__invite slider__invite--4"></div>
+                        </div>
+                    </div>
+
+                    <div class="slider__arrow">
+                        <button class="slider__arrow--btn"><img src="img/icons/arrowDown.svg" alt="down"></button>
+                    </div>
+                
+
                 </div>
                 
             </div>
@@ -554,45 +611,48 @@
         <div class="project__container project__california projectHidden clearfix" id="california-website">
             <button class="project__close">&times;</button>
             <div class="project__column project__column--left slideOutLeft">
-                <div class="project__header">
-                    <div class="project__header--pos clearfix">
-                        <div class="project__title">
-                            <h3>Explore California</h3>                        
-                        </div>                        
-                    </div>
-                </div>
 
-                <div class="project__body">
-                    <div class="project__body--dash"></div>
-                    <div class="project__body--frame-1"></div>
-                    <div class="project__body--content">
-                        <h4>Description</h4>
-                        <p> This travel website describes one of the most weel-known roadtrip through California following the 
-                            Pacific Coast Highway. Visit the website to get the full experience as it has a few animations.
-                        </p>  
-                        <p>
-                            The goal of this website were :
-                            <ul>
-                                <li>&ndash; to help the user plan his trip with the main stops information,</li>
-                                <li>&ndash; to work on any device, for practicity durin the trip,</li>
-                                <li>&ndash; to allow expension if more stops are added,</li>
-                                <li>&ndash; to be visually attractive</li>
-                            </ul>         
-    
-                        </p>
-                        <h4>Design</h4>
-                        On a technical level, it was an opportunity to experiment mainly with :
+                <div class="project__content">
+                
+                    <div class="project__title">
+                        <h3>Explore California</h3>                        
+                    </div>                        
+                    
+                    <div class="project__body">
+                        <div class="project__body--dash"></div>
+                        <div class="project__body--frame-1"></div>
+                        <div class="project__body--content">
+                            <h4>Description</h4>
+                            <p> This travel website describes one of the most well-known roadtrip through California following the 
+                                Pacific Coast Highway. Visit the website to get the full experience as it has a few animations.
+                            </p>                              
+                            <p>The goal of this website were :</p>
+                                <ul>
+                                    <li>&ndash; to help the user plan his trip with the main stops information,</li>
+                                    <li>&ndash; to work on any device for practicity during the trip,</li>
+                                    <li>&ndash; to allow expansion if more stops are added,</li>
+                                    <li>&ndash; to be visually attractive</li>
+                                </ul>       
+                                    
+                            <h4>Design</h4>
+                            <p>
+                                I created a simple design, fairly minimalist in order to keep the website very clear and avoid an overload of text and 
+                                information.                     
+                            </p>
+                            <p> On a technical level, it was an opportunity to experiment mainly with :</p>            
                             <ul>
                                 <li>&ndash; AJAX calls to an API,</li>
-                                <li>&ndash; use ES6 classes to manage both data and UI, allowing scalability.</li>
+                                <li>&ndash; ES6 classes to manage both data and UI, allowing scalability.</li>
                             </ul>
-                        <p class="project__body--content-link">
-                            <a href="">See my code on github &rarr;</a> 
-                        </p>
-                    </div>
-                    <div class="project__body--frame-2"></div>
-                    <div class="project__body--dash"></div>                        
-                </div>                
+                            <p class="project__body--content-link">
+                                <a href="">See my code on github &rarr;</a> 
+                            </p>
+                        </div>
+                        <div class="project__body--frame-2"></div>
+                        <div class="project__body--dash"></div>                        
+                    </div>                
+                </div>
+
             </div>
             <div class="project__column project__column--right slideOutRight">                
                 <div class="project__media">
@@ -641,39 +701,82 @@
                 <div class="project__display">
                     <div class="project__device project__desktop">
                         <div class="project__desktop--monitor">
-                            <img src="img/desktop.png" alt="">
+                            <img srcset="img/devices/desktop-small.png 350w, img/devices/desktop.png 600w"
+                            sizes="(max-width:25em) 320px"                                   
+                            src="img/devices/desktop.png" alt="Desktop monitor">
                             <div class="project__desktop--screen">
                                 <div class="project__desktop--screen-in">
-                                    <img src="img/cal_website_desktop.jpg" alt="">
+                                    <img srcset="img/projects/cal_website_desktop-small.jpg 350w, img/projects/cal_website_desktop.jpg 600w"
+                                    sizes="(max-width:25em) 300px"  
+                                    src="img/projects/cal_website_desktop.jpg" alt="Desktop website">
                                 </div>
                             </div>
                         </div>                    
                     </div>
                     <div class="project__device project__tablet mediaHidden">
                         <div class="project__tablet--monitor">
-                            <img src="img/tablet.png" alt="">
+                            <img srcset="img/devices/tablet-small.png 300w, img/devices/tablet.png 450w"
+                            sizes="(max-width:25em) 240px"                                        
+                            src="img/devices/tablet.png" alt="Tablet">
                             <div class="project__tablet--screen">
                                 <div class="project__tablet--screen-in">
-                                    <img src="img/cal_website_tablet.jpg" alt="">
+                                    <img srcset="img/projects/cal_website_tablet-small.jpg 220w, img/projects/cal_website_tablet.jpg 450w"
+                                    sizes="(max-width:25em) 200px"
+                                    src="img/projects/cal_website_tablet.jpg" alt="Tablet website">
                                 </div>
                             </div>
                         </div>                    
                     </div>
                     <div class="project__device project__phone mediaHidden">
                         <div class="project__phone--monitor">
-                            <img src="img/phone.png" alt="">
+                            <img src="img/devices/phone.png" alt="Phone">
                             <div class="project__phone--screen">
                                 <div class="project__phone--screen-in">
-                                    <img src="img/cal_website_phone.jpg" alt="">
+                                    <img srcset="img/projects/cal_website_phone-small.jpg 150w, img/projects/cal_website_phone.jpg 300w"
+                                    sizes="(max-width:25em) 140px"
+                                    src="img/projects/cal_website_phone.jpg" alt="Phone website">
                                 </div>
                             </div>
                         </div>                    
                     </div>
                 </div>
 
-                <div class="project__link">
-                    <button class="project__link--btn">VISIT THE WEBSITE</button>
+                <div class="project__buttons">
+                    <div class="project__extra">
+                        <button class="project__extra--btn">RESEARCH</button>
+                    </div>
+    
+                    <div class="project__link">
+                        <div class="project__link--btn"><a href="projects/california/index.html" target="blank">VISIT THE WEBSITE</a></div>
+                    </div>
                 </div>
+
+                <div class="slider__research researchSlide">
+
+                        <div class="slider__resCol slider__resCol--1 slider__resCol--1-cal"></div>
+                        <div class="slider__resCol slider__resCol--2">
+                            
+                            <h4>Research</h4>  
+                            <div class="slider__typo slider__typo--2"></div>                      
+                            
+                            <div class="slider__palette">
+                                <h4>Colours</h4>
+                                <div class="slider__palette--square slider__palette--square-6"></div>
+                                <div class="slider__palette--square slider__palette--square-7"></div>
+                                <div class="slider__palette--square slider__palette--square-8"></div>
+                                <div class="slider__palette--square slider__palette--square-9"></div>
+                                <div class="slider__palette--square slider__palette--square-10"></div>
+                            </div>
+                            <h4>Slider Layout</h4>
+                            <div class="slider__draft slider__draft--2"></div>
+                        </div>
+    
+                        <div class="slider__arrow">
+                            <button class="slider__arrow--btn"><img src="img/icons/arrowDown.svg" alt="down"></button>
+                        </div>
+                    
+    
+                    </div>
                 
             </div>
         </div>
@@ -681,27 +784,24 @@
         <div class="project__container project__craft projectHidden clearfix" id="craft-website">
                 <button class="project__close">&times;</button>
                 <div class="project__column project__column--left slideOutLeft">
-                    <div class="project__header">
-                        <div class="project__header--pos clearfix">
-                            <div class="project__title">
-                                <h3>Busy Bee Studio</h3>                        
-                            </div>                        
-                        </div>
-                    </div>
-    
-                    <div class="project__body">
-                        <div class="project__body--dash"></div>
-                        <div class="project__body--frame-1"></div>
-                        <div class="project__body--content">
-                            <h4>Description</h4>
-                            <p> Busy Bee Studio is a pretend craft center offering different types of art and craft classes. 
-                                A lot of craft centers and classes have fairly old websites or none at all making it harder
-                                for them to attract a new public. 
-                                The idea was to design an engaging website where people could learn more about the center, teachers and
-                                book classes online.  
-                            </p>  
-                            <p>
-                                The goal of this website were :
+
+                    <div class="project__content">                    
+                        <div class="project__title">
+                            <h3>Busy Bee Studio</h3>                        
+                        </div>                        
+                    
+                        <div class="project__body">
+                            <div class="project__body--dash"></div>
+                            <div class="project__body--frame-1"></div>
+                            <div class="project__body--content">
+                                <h4>Description</h4>
+                                <p> Busy Bee Studio is a pretend craft center offering different types of art and craft classes. 
+                                    A lot of craft centers and classes have fairly old websites or none at all making it harder
+                                    for them to attract a new public. 
+                                    The idea was to design an engaging website where people could learn more about the center, teachers and
+                                    book classes online.  
+                                </p>  
+                                <p>The goal of this website were :</p>
                                 <ul>
                                     <li>&ndash; design an engaging website to attract a wide public,</li>
                                     <li>&ndash; create a fresh visual identity,</li>
@@ -712,25 +812,194 @@
                                 <ul>
                                     <li>&ndash; javascript to create sliders and gallery,</li>
                                     <li>&ndash; complex media queries which adapt to the screen orientation.</li>
-                                </ul>
-        
-                            </p>
+                                </ul>            
+                                
+    
+                                <h4>Design</h4>
+    
+                                <p>
+                                    The target audience is in majority women, but the age range can be quite wide depending the classes.
+                                    I decided to keep a pastel palette of colours to give the website a fresh and dynamic look while 
+                                    keeping readibility to its maximum.
+                                </p>
+    
+                                <p class="project__body--content-link">
+                                    <a href="">See my code on github &rarr;</a> 
+                                </p>
+                            </div>
+                            <div class="project__body--frame-2"></div>
+                            <div class="project__body--dash"></div>                        
+                        </div>                
+                    </div>    
+                </div>
 
-                            <h4>Design</h4>
-
-                            <p>
-                                The target audience is in majority women, but the age range can be quite wide depending the classes.
-                                I decided to keep a pastel palette of colours to give the website a fresh and dynamic look while 
-                                keeping readibility to its maximum.
-                            </p>
-
-                            <p class="project__body--content-link">
-                                <a href="">See my code on github &rarr;</a> 
-                            </p>
+                <div class="project__column project__column--right slideOutRight">                    
+                    <div class="project__media">
+                            <button class="project__btn project__btn--desktop">
+                                <svg version="1.1" class="device-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" fill="#ff4545">
+                                    <g>
+                                        <path d="M85.482,13.232H15.837c-2.96,0-5.363,2.417-5.363,5.398V68.1c0,2.986,2.402,5.398,5.363,5.398h26.714
+                                            c0,0-4.693,10.8-17.553,10.8v2.697h9.448h22.957h17.556v-2.697c-13.224,0-16.213-10.8-16.213-10.8H85.48
+                                            c2.955,0,5.352-2.412,5.352-5.398V18.63C90.841,15.65,88.439,13.232,85.482,13.232z M50.657,70.602
+                                            c-0.675,0-1.222-0.547-1.222-1.224c0-0.674,0.547-1.221,1.222-1.221c0.675,0,1.225,0.547,1.225,1.221
+                                            C51.878,70.055,51.332,70.602,50.657,70.602z M85.098,64.743H16.219V18.972h68.885L85.098,64.743z"/>
+                                    </g>
+                                </svg>
+                        </button>
+                        <button class="project__btn project__btn--tablet">
+                            <svg version="1.1" class="device-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" fill="#FFFFFF">
+                                <g>
+                                    <path d="M72.738,13.515h-43.62c-2.749,0-4.963,2.225-4.963,4.971v63.257c0,2.738,2.213,4.97,4.963,4.97h43.62
+                                        c2.741,0,4.966-2.229,4.966-4.97V18.487C77.708,15.74,75.481,13.515,72.738,13.515z M50.932,83.291
+                                        c-0.771,0-1.394-0.622-1.394-1.392c0-0.771,0.623-1.395,1.394-1.395c0.768,0,1.393,0.623,1.393,1.395
+                                        C52.324,82.669,51.699,83.291,50.932,83.291z M72.681,76.36h-43.5V19.489h43.5V76.36z"/>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="project__btn project__btn--phone">
+                            <svg version="1.1" class="device-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" fill="#FFFFFF">
+                                <g>
+                                    <path d="M63.163,25.853H35.837c-2.277,0-4.141,1.861-4.141,4.141v53.012c0,2.277,1.863,4.143,4.141,4.143h27.326
+                                       c2.274,0,4.142-1.858,4.142-4.142V29.994C67.305,27.714,65.438,25.853,63.163,25.853z M45.129,28.838h8.743
+                                       c0.276,0,0.501,0.223,0.501,0.502c0,0.276-0.225,0.5-0.501,0.5h-8.743c-0.276,0-0.501-0.224-0.501-0.5
+                                       C44.627,29.061,44.853,28.838,45.129,28.838z M49.5,85.078c-1.143,0-2.07-0.928-2.07-2.072c0-1.146,0.927-2.07,2.07-2.07
+                                       c1.143,0,2.068,0.924,2.068,2.07C51.568,84.15,50.643,85.078,49.5,85.078z M64.424,79.484H34.578V32.418h29.846V79.484
+                                       L64.424,79.484z"/>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="project__exp">                    
+                        <div class="project__exp--icon">
+                            <img src="img/icons/scroll.svg" alt="scroll">
                         </div>
-                        <div class="project__body--frame-2"></div>
-                        <div class="project__body--dash"></div>                        
-                    </div>                
+                    </div>
+
+                    <div class="project__display">
+                        <div class="project__device project__desktop">
+                            <div class="project__desktop--monitor">
+                                <img srcset="img/devices/desktop-small.png 350w, img/devices/desktop.png 600w"
+                                sizes="(max-width:25em) 320px"                                   
+                                src="img/devices/desktop.png" alt="Desktop monitor">
+                                <div class="project__desktop--screen">
+                                    <div class="project__desktop--screen-in">
+                                        <img srcset="img/projects/busybee_website_desktop-small.jpg 350w, img/projects/busybee_website_desktop.jpg 600w"
+                                        sizes="(max-width:25em) 300px"
+                                        src="img/projects/busybee_website_desktop.jpg" alt="Desktop website">
+                                    </div>
+                                </div>
+                            </div>                    
+                        </div>
+                        <div class="project__device project__tablet mediaHidden">
+                            <div class="project__tablet--monitor">
+                                <img srcset="img/devices/tablet-small.png 300w, img/devices/tablet.png 450w"
+                                sizes="(max-width:25em) 240px"                                        
+                                src="img/devices/tablet.png" alt="Tablet">
+                                <div class="project__tablet--screen">
+                                    <div class="project__tablet--screen-in">
+                                        <img srcset="img/projects/busybee_website_tablet-small.jpg 220w, img/projects/busybee_website_tablet.jpg 450w"
+                                        sizes="(max-width:25em) 200px"
+                                        src="img/projects/busybee_website_tablet.jpg" alt="Tablet website">
+                                    </div>
+                                </div>
+                            </div>                    
+                        </div>
+                        <div class="project__device project__phone mediaHidden">
+                            <div class="project__phone--monitor">
+                                <img src="img/devices/phone.png" alt="Phone">
+                                <div class="project__phone--screen">
+                                    <div class="project__phone--screen-in">
+                                        <img srcset="img/projects/busybee_website_phone-small.jpg 220w, img/projects/busybee_website_phone.jpg 450w"
+                                        sizes="(max-width:25em) 140px"
+                                        src="img/projects/busybee_website_phone.jpg" alt="Phone website">
+                                    </div>
+                                </div>
+                            </div>                    
+                        </div>
+                    </div>
+    
+
+                    <div class="project__buttons">
+                        <div class="project__extra">
+                            <button class="project__extra--btn">RESEARCH</button>
+                        </div>
+        
+                        <div class="project__link">
+                            <div class="project__link--btn"><a href="projects/busybee/index.html" target="blank">VISIT THE WEBSITE</a></div>
+                        </div>
+                    </div>
+        
+                    <div class="slider__research researchSlide">
+    
+                        <div class="slider__resCol slider__resCol--1 slider__resCol--1-bee"></div>
+                        <div class="slider__resCol slider__resCol--2">
+                            
+                            <h4>Research</h4>  
+                            <div class="slider__typo slider__typo--3"></div>                      
+                            
+                            <div class="slider__palette">
+                                <h4>Colours</h4>
+                                <div class="slider__palette--square slider__palette--square-11"></div>
+                                <div class="slider__palette--square slider__palette--square-12"></div>
+                                <div class="slider__palette--square slider__palette--square-13"></div>
+                                <div class="slider__palette--square slider__palette--square-14"></div>
+                                <div class="slider__palette--square slider__palette--square-15"></div>
+                            </div>
+                            
+                            <h4>Classes layout for media queries</h4>
+                            <div class="slider__draft slider__draft--3"></div>
+                            
+                        </div>
+    
+                        <div class="slider__arrow">
+                            <button class="slider__arrow--btn"><img src="img/icons/arrowDown.svg" alt="down"></button>
+                        </div>                    
+    
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <div class="project__container project__dots projectHidden clearfix" id="dots-website">
+                <button class="project__close">&times;</button>
+                <div class="project__column project__column--left slideOutLeft">
+                    <div class="project__content">
+
+                        <div class="project__title">
+                            <h3>Dots : do it!</h3>                        
+                        </div>
+
+                        <div class="project__body">
+                            <div class="project__body--dash"></div>
+                            <div class="project__body--frame-1"></div>
+                            <div class="project__body--content">
+                                <h4>Description</h4>
+                                <p> The project Dots is mainly experimental : I learned the basis of javascript through a course with the development
+                                    of the budget app. From there, I decided to convert it to ES6 in order to be more familiar with it and use some new features 
+                                    of the language.
+                                    I then created another two applications on a similar model : the to-do list and the tips calculator.
+                                    On the CSS side, it was the occasion to animate a few illustrations with simple keyframes.
+                                </p>                              
+    
+                                <h4>Design</h4>
+    
+                                <p> This is not a typical website as it's more applications orientated. A typical menu with pages didn't really fit
+                                    for this type of content.
+                                    The three buttons allow to clearly define each app while giving them a touch of humour.                                 
+                                </p>
+    
+                                <p class="project__body--content-link">
+                                    <a href="">See my code on github &rarr;</a> 
+                                </p>
+                            </div>
+                            <div class="project__body--frame-2"></div>
+                            <div class="project__body--dash"></div>                        
+                        </div>
+                    </div>
                 </div>
                 <div class="project__column project__column--right slideOutRight">                    
                     <div class="project__media">
@@ -780,38 +1049,81 @@
                     <div class="project__display">
                         <div class="project__device project__desktop">
                             <div class="project__desktop--monitor">
-                                <img src="img/desktop.png" alt="">
+                                <img srcset="img/devices/desktop-small.png 350w, img/devices/desktop.png 600w"
+                                sizes="(max-width:25em) 320px"                                   
+                                src="img/devices/desktop.png" alt="Desktop monitor">
                                 <div class="project__desktop--screen">
                                     <div class="project__desktop--screen-in">
-                                        <img src="img/cal_website_desktop.jpg" alt="">
+                                        <img srcset="img/projects/dots_website_desktop-small.jpg 350w, img/projects/dots_website_desktop.jpg 600w"
+                                        sizes="(max-width:25em) 300px"
+                                        src="img/projects/dots_website_desktop.jpg" alt="Desktop website">
                                     </div>
                                 </div>
                             </div>                    
                         </div>
                         <div class="project__device project__tablet mediaHidden">
                             <div class="project__tablet--monitor">
-                                <img src="img/tablet.png" alt="">
+                                <img srcset="img/devices/tablet-small.png 300w, img/devices/tablet.png 450w"
+                                sizes="(max-width:25em) 240px"                                        
+                                src="img/devices/tablet.png" alt="Tablet">
                                 <div class="project__tablet--screen">
                                     <div class="project__tablet--screen-in">
-                                        <img src="img/cal_website_tablet.jpg" alt="">
+                                        <img srcset="img/projects/dots_website_tablet-small.jpg 220w, img/projects/dots_website_tablet.jpg 450w"
+                                        sizes="(max-width:25em) 200px"
+                                        src="img/projects/dots_website_tablet.jpg" alt="Tablet website">
                                     </div>
                                 </div>
                             </div>                    
                         </div>
                         <div class="project__device project__phone mediaHidden">
                             <div class="project__phone--monitor">
-                                <img src="img/phone.png" alt="">
+                                <img src="img/devices/phone.png" alt="Phone">
                                 <div class="project__phone--screen">
                                     <div class="project__phone--screen-in">
-                                        <img src="img/cal_website_phone.jpg" alt="">
+                                        <img srcset="img/projects/dots_website_phone-small.jpg 150w, img/projects/dots_website_phone.jpg 300w"
+                                        sizes="(max-width:25em) 140px"
+                                        src="img/projects/dots_website_phone.jpg" alt="Phone website">
                                     </div>
                                 </div>
                             </div>                    
                         </div>
                     </div>
     
-                    <div class="project__link">
-                        <button class="project__link--btn">VISIT THE WEBSITE</button>
+                    
+
+                    <div class="project__buttons">
+                        <div class="project__extra">
+                            <button class="project__extra--btn">RESEARCH</button>
+                        </div>
+        
+                        <div class="project__link">
+                            <div class="project__link--btn"><a href="projects/dots/index.html" target="blank">VISIT THE WEBSITE</a></div>
+                        </div>
+                    </div>
+        
+                    <div class="slider__research researchSlide">
+    
+                        <div class="slider__resCol slider__resCol--1 slider__resCol--1-dots"></div>
+                        <div class="slider__resCol slider__resCol--2">
+                            
+                            <h4>Research</h4>  
+                            <div class="slider__typo slider__typo--4"></div>                      
+                            
+                            <div class="slider__palette">
+                                <h4>Colours</h4>
+                                <div class="slider__palette--square slider__palette--square-16"></div>
+                                <div class="slider__palette--square slider__palette--square-17"></div>
+                                <div class="slider__palette--square slider__palette--square-18"></div>
+                                <div class="slider__palette--square slider__palette--square-19"></div>
+                            </div>
+                            <h4>Animation breakdown</h4>
+                            <div class="slider__draft slider__draft--4"></div>
+                        </div>
+    
+                        <div class="slider__arrow">
+                            <button class="slider__arrow--btn"><img src="img/icons/arrowDown.svg" alt="down"></button>
+                        </div>                    
+    
                     </div>
                     
                 </div>
@@ -819,11 +1131,10 @@
     </section>
 
 
-    <section class="contact hidden">
+    <section class="contact hidden" id="contact">
 
         <div class="container contact__container">
                 
-    
                 <div class="contact__presentation clearfix">
 
                     <div class="contact__left">
@@ -840,60 +1151,19 @@
 
                     <div class="contact__right clearfix">
                         
-                        <div class="contact__content">
-                        
+                        <div class="contact__content">                    
                             <h3 class="contact__title">Contact Me</h3>
                             <h4>Want to say Hi?</h4>
-                            
-                            <div class="contact__form">
-                              <!-- <form action="action_page.php">
-                            
-                                <label for="fname">First Name</label>
-                                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                            
-                                <label for="lname">Last Name</label>
-                                <input type="text" id="lname" name="lastname" placeholder="Your last name..">                       
-                                
-                            
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
-                                
-                                <div class="contact__btn">
-                                    <input type="submit" value="Submit &rarr;" id="submit">
-                                </div>
-                            
-                              </form> -->
-                              <form action="contact.php" method="post">
-                                    <div class="elem-group">
-                                      <label for="name">Your Name</label>
-                                      <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
-                                    </div>
-                                    <div class="elem-group">
-                                      <label for="email">Your E-mail</label>
-                                      <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
-                                    </div>
-                                    <div class="elem-group">
-                                      <label for="department-selection">Choose Concerned Department</label>
-                                      <select id="department-selection" name="concerned_department" required>
-                                          <option value="">Select a Department</option>
-                                          <option value="billing">Billing</option>
-                                          <option value="marketing">Marketing</option>
-                                          <option value="technical support">Technical Support</option>
-                                      </select>
-                                    </div>
-                                    <div class="elem-group">
-                                      <label for="title">Reason For Contacting Us</label>
-                                      <input type="text" id="title" name="email_title" required placeholder="Unable to Reset my Password" pattern=[A-Za-z0-9\s]{8,60}>
-                                    </div>
-                                    <div class="elem-group">
-                                      <label for="message">Write your message</label>
-                                      <textarea id="message" name="visitor_message" placeholder="Say whatever you want." required></textarea>
-                                    </div>
-                                    <button type="submit">Send Message</button>
-                                  </form>
-                            </div>
-                        
+
+                            <p>Whether you have a question, want to know more or just want to say hi, don't hesitate to contact me, 
+                                I aim to respond to my messages within 24 hours.
+                            </p>
+
+                            <div class="contact__form">                              
+                                <a href="//www.123formbuilder.com/form-4724187/visitor-interaction-form" target="blank">Send me a message</a>
+                            </div>                    
                         </div>
+                        
                         <div class="contact__frame--2"></div>
                     </div>
                 </div>
@@ -907,6 +1177,6 @@
 
 
 
-    <script src="js/index.js"></script>
+    <script src="js/bundle.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
         height: 100%;
         float: left;
         position: relative;
-        background-image: url(../img/landpage_L.png);
+        background-image: url(../img/landpage_L.jpg);
         background-position: right;
         background-size: cover;
         transition: all .5s ease-in-out;
@@ -22,7 +22,7 @@
         height: 100%;
         float: right;
         position: relative;
-        background-image: url(../img/landpage_R.png);
+        background-image: url(../img/landpage_R.jpg);
         background-position: left;
         background-size: cover;
         transition: all .5s ease-in-out;
@@ -64,8 +64,11 @@
             @include respond(phone){
                 left: 18%;
             }
-            @include respond(small-phone){                
-                left: 12%;
+            @include respond(small-phone){ 
+                width: 16rem;
+                height:16rem; 
+                top: 45%;              
+                left: 10%;
             }
         }
         &--blockG{
@@ -81,6 +84,12 @@
             transition: all .6s ease-in-out;
             @include respond(phone){
                 left: 45%;
+            }
+            @include respond(small-phone){ 
+                width: 16rem;
+                height:16rem; 
+                top: 50%;              
+                left: 50%;
             }
         }
 
@@ -141,6 +150,10 @@
         transform: translate(-50%, -80%);
         transition: all .5s ease-in-out;
         outline: none;
+
+        @include respond(small-phone){                
+            top: 90%;
+        }
 
         &--btn{
             color: white;
