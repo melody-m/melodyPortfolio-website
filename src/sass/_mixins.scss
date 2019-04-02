@@ -101,7 +101,7 @@
         @media only screen and (max-width: 75em) {@content};  //1200px
     }
     @if $breakpoint == laptop {
-        @media only screen and (max-width: 86.25em) and (max-height: 43.75em) {@content};  //1380px -700
+        @media only screen and (max-width: 86.25em) and (max-height: 50em) {@content};  //1380px -800
     }
 
     @if $breakpoint == desktop {

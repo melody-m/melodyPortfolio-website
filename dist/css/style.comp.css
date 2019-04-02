@@ -24,9 +24,9 @@ h3 {
   @media only screen and (max-width: 56.25em) {
     h3 {
       font-size: 6rem; } }
-  @media only screen and (max-width: 18.75em) {
+  @media only screen and (max-width: 21.75em) {
     h3 {
-      font-size: 5rem; } }
+      font-size: 4rem; } }
 
 h4 {
   font-family: 'Roboto', sans-serif;
@@ -54,7 +54,7 @@ h4 {
   font-size: 3rem;
   color: white; }
 
-@media only screen and (max-width: 18.75em) {
+@media only screen and (max-width: 21.75em) {
   .skill__text {
     font-size: 1.2rem; } }
 
@@ -70,14 +70,14 @@ h4 {
   font-weight: 300;
   line-height: 4rem;
   color: white; }
-  @media only screen and (max-width: 86.25em) and (max-height: 43.75em) {
+  @media only screen and (max-width: 86.25em) and (max-height: 50em) {
     .project__title h3 {
       font-size: 3rem; } }
-  @media only screen and (max-width: 18.75em) {
+  @media only screen and (max-width: 21.75em) {
     .project__title h3 {
       font-size: 2.2rem; } }
 
-@media only screen and (max-width: 86.25em) and (max-height: 43.75em) {
+@media only screen and (max-width: 86.25em) and (max-height: 50em) {
   .project__body--content {
     font-size: 1.3rem; } }
 
@@ -88,11 +88,11 @@ h4 {
 .project__extra--btn {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.4rem; }
-  @media only screen and (max-width: 18.75em) {
+  @media only screen and (max-width: 21.75em) {
     .project__extra--btn {
       font-size: 1.5rem; } }
 
-@media only screen and (max-width: 18.75em) {
+@media only screen and (max-width: 21.75em) {
   .project__link--btn {
     font-size: 1.5rem; } }
 
@@ -109,7 +109,7 @@ h4 {
   @media only screen and (max-width: 37.5em) {
     .number {
       font-size: 8rem; } }
-  @media only screen and (max-width: 18.75em) {
+  @media only screen and (max-width: 21.75em) {
     .number {
       font-size: 7rem; } }
 
@@ -459,7 +459,7 @@ body {
       @media only screen and (max-width: 37.5em) {
         .landpage__title--blockW {
           left: 18%; } }
-      @media only screen and (max-width: 18.75em) {
+      @media only screen and (max-width: 21.75em) {
         .landpage__title--blockW {
           width: 16rem;
           height: 16rem;
@@ -479,7 +479,7 @@ body {
       @media only screen and (max-width: 37.5em) {
         .landpage__title--blockG {
           left: 45%; } }
-      @media only screen and (max-width: 18.75em) {
+      @media only screen and (max-width: 21.75em) {
         .landpage__title--blockG {
           width: 16rem;
           height: 16rem;
@@ -524,7 +524,7 @@ body {
       @media only screen and (max-width: 37.5em) {
         .landpage__title--frame {
           left: 12%; } }
-      @media only screen and (max-width: 18.75em) {
+      @media only screen and (max-width: 21.75em) {
         .landpage__title--frame {
           left: 5%; } }
   .landpage__enter {
@@ -534,7 +534,7 @@ body {
     transform: translate(-50%, -80%);
     transition: all .5s ease-in-out;
     outline: none; }
-    @media only screen and (max-width: 18.75em) {
+    @media only screen and (max-width: 21.75em) {
       .landpage__enter {
         top: 90%; } }
     .landpage__enter--btn {
@@ -566,7 +566,7 @@ body {
     @media only screen and (max-width: 37.5em) {
       .about__container {
         padding: 8rem 0; } }
-    @media only screen and (max-width: 18.75em) {
+    @media only screen and (max-width: 21.75em) {
       .about__container {
         padding: 4rem 0; } }
   .about__presentation {
@@ -603,7 +603,7 @@ body {
       .about__right {
         width: 90%;
         float: right; } }
-    @media only screen and (max-width: 18.75em) {
+    @media only screen and (max-width: 21.75em) {
       .about__right {
         width: 100%;
         float: right; } }
@@ -624,7 +624,7 @@ body {
       .about__number {
         top: -1rem;
         left: -2.5rem; } }
-    @media only screen and (max-width: 18.75em) {
+    @media only screen and (max-width: 21.75em) {
       .about__number {
         top: -6rem; } }
   .about__photo {
@@ -640,7 +640,7 @@ body {
     @media only screen and (max-width: 37.5em) {
       .about__photo {
         background-image: url(../img/about-small.jpg); } }
-    @media only screen and (max-width: 18.75em) {
+    @media only screen and (max-width: 21.75em) {
       .about__photo {
         background-image: none; } }
   .about__frame--1 {
@@ -656,7 +656,7 @@ body {
       .about__frame--1 {
         height: 42rem;
         top: 30%; } }
-    @media only screen and (max-width: 18.75em) {
+    @media only screen and (max-width: 21.75em) {
       .about__frame--1 {
         height: 42rem;
         top: 20%; } }
@@ -676,7 +676,7 @@ body {
       .about__frame--2 {
         top: 5%;
         right: -5%; } }
-    @media only screen and (max-width: 18.75em) {
+    @media only screen and (max-width: 21.75em) {
       .about__frame--2 {
         top: -10%;
         right: -5%; } }
@@ -741,7 +741,7 @@ body {
       .window__box {
         width: 36rem;
         height: 36rem; } }
-    @media only screen and (max-width: 18.75em) {
+    @media only screen and (max-width: 21.75em) {
       .window__box {
         width: 30rem;
         height: 36rem; } }
@@ -770,7 +770,7 @@ body {
       .window__front {
         width: 32rem;
         height: 32rem; } }
-    @media only screen and (max-width: 18.75em) {
+    @media only screen and (max-width: 21.75em) {
       .window__front {
         width: 26rem;
         height: 32rem; } }
@@ -796,7 +796,7 @@ body {
     @media only screen and (max-width: 56.25em) {
       .window__back--content {
         padding: 3rem; } }
-    @media only screen and (max-width: 18.75em) {
+    @media only screen and (max-width: 21.75em) {
       .window__back--content {
         padding: 1rem; } }
   .window__back--title {
@@ -905,7 +905,7 @@ body {
       @media only screen and (max-width: 37.5em) {
         .skill__outline--center {
           width: 25.2rem; } }
-      @media only screen and (max-width: 18.75em) {
+      @media only screen and (max-width: 21.75em) {
         .skill__outline--center {
           width: 19.2rem; } }
     .skill__outline--center-small {
@@ -915,7 +915,7 @@ body {
       @media only screen and (max-width: 37.5em) {
         .skill__outline--center-small {
           width: 16.8rem; } }
-      @media only screen and (max-width: 18.75em) {
+      @media only screen and (max-width: 21.75em) {
         .skill__outline--center-small {
           width: 12.8rem; } }
   .skill__offset {
@@ -937,7 +937,7 @@ body {
         width: 8rem;
         height: 22.2rem;
         margin: 0; } }
-    @media only screen and (max-width: 18.75em) {
+    @media only screen and (max-width: 21.75em) {
       .skill__item {
         width: 6rem;
         height: 19.7rem; } }
@@ -1130,7 +1130,7 @@ body {
     text-align: center;
     padding: 1rem 1.5rem;
     z-index: 500; }
-    @media only screen and (max-width: 86.25em) and (max-height: 43.75em) {
+    @media only screen and (max-width: 86.25em) and (max-height: 50em) {
       .project__title {
         top: 2.5rem;
         padding: .6rem 1.2rem; } }
@@ -1193,7 +1193,7 @@ body {
       background-color: white;
       position: relative;
       z-index: 200; }
-      @media only screen and (max-width: 86.25em) and (max-height: 43.75em) {
+      @media only screen and (max-width: 86.25em) and (max-height: 50em) {
         .project__body--content {
           padding: 3rem;
           padding-top: 5rem; } }
@@ -1287,7 +1287,7 @@ body {
     display: inline-block;
     text-align: center;
     padding: 3rem; }
-    @media only screen and (max-width: 18.75em) {
+    @media only screen and (max-width: 21.75em) {
       .project__extra {
         padding: 1.5rem; } }
     .project__extra--btn {
@@ -1305,7 +1305,7 @@ body {
     display: inline-block;
     text-align: center;
     padding: 3rem; }
-    @media only screen and (max-width: 18.75em) {
+    @media only screen and (max-width: 21.75em) {
       .project__link {
         padding: 1.5rem; } }
     .project__link--btn {
