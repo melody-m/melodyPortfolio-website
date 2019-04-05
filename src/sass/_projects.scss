@@ -256,6 +256,10 @@
         text-align: center;
         padding: 3rem;
 
+        @include respond(laptop-small){
+            padding: 2rem;         
+        }
+
         @include respond(small-phone){
             padding: 1.5rem;         
         }
@@ -277,6 +281,10 @@
         display: inline-block;
         text-align: center;
         padding: 3rem;
+
+        @include respond(laptop-small){
+            padding: 2rem;         
+        }
 
         @include respond(small-phone){
             padding: 1.5rem;         
@@ -307,6 +315,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @include respond(laptop-small){
+            width: 50%;      
+        }
         @include respond(big-tab){
             width: 50%;      
         }  
@@ -357,6 +368,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @include respond(laptop-small){
+            width: 30%;     
+        }  
         @include respond(big-tab){
             width: 25%;     
         }  
@@ -410,6 +424,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
+        @include respond(laptop-small){
+            width: 25%;           
+        } 
         @include respond(big-tab){
             width: 20%;           
         }  

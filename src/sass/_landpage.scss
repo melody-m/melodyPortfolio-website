@@ -151,6 +151,10 @@
         transition: all .5s ease-in-out;
         outline: none;
 
+        @include respond(laptop-small){                
+            top: 92%;
+        }
+
         @include respond(small-phone){                
             top: 90%;
         }
